@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="../css/plugins/jqgrid/ui.jqgridffe4.css" rel="stylesheet">
+</head>
+<body>
+    <div class="pd-15">
+        <div style="clear: both;"></div>
+        <div  class="jqGrid_wrapper">
+            <table id="userTableList" style="border: none;"></table>
+            <div id="userTableListPager"></div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="../js/plugins/jqgrid/i18n/grid.locale-cnffe4.js"></script>
+<script type="text/javascript" src="../js/plugins/jqgrid/jquery.jqGrid.minffe4.js"></script>
+<script type="text/javascript">
+/**
+ * Created by hsh on 2017/5/03.
+ */
+$(document).ready(function(){
+    $("#userTableList").jqGridFunction({
+        url:'/people/findPeople',
+        dataType:'json',
+        postData:{},//'peopleInfo.name':'黄山河'
+        styleUI:'Bootstrap',
+        autowidth:true,
+        viewrecords:true,
+        shrinkToFit:true,
+        rowList:[10,20,50,100],
+        colNames:['主键','操作','姓名','帐号','手机号码','邮箱地址','区域'],
+        colModel:[{name:'id',key:true,hidden:true},
+            {name:'operat',width:90,formatter:operatFormatter},
+            {name:'name',width:100},
+            {name:'account',sortable:true},
+            {name:'phone',sortable:true},
+            {name:'email',width:180,sortable:true},
+            {name:'department.name',sortable:true}
+        ],
+        height:$(document).height()-$("#manage-area-title").height()-130,
+        rownumbers: true, // 显示行号
+        multiselect:true
+
+    });
+    $(window).bind('resize', function () {
+        var width = $('.jqGrid_wrapper').width();
+        $("#userTableList").setGridWidth(width);
+        // $("#userTableList").setGridWidth($(window).width()*0.99);　
+    });
+    function operatFormatter(cellvalue, options, rowObject){
+        var operateHtml = "";
+            operateHtml +='<a title="编辑" href="javascript:layer_shows('+rowObject.id+',1)" class="ml-5" style="text-decoration: none"><i class="Hui-iconfont">&#xe6df;</i></a>';
+            operateHtml +='<a title="删除" href="javascript:deleUser('+rowObject.id+')"  class="ml-5" style="text-decoration: none"><i class="Hui-iconfont">&#xe6e2;</i></a>';
+        return operateHtml;
+    };
+});
+
+//弹出层
+function layer_shows(id,flag){
+    if(flag == 1){
+        var title = "编辑用户";
+        var url = 'userManagement-add.html?editId='+id+'&flagId='+'edit';
+        var w = "540px";
+        var h = "456px";
+    }else{
+        var title = "用户详情";
+        var url = 'biddingManagement-detail.html?editId='+id+'&flagId='+'edit';
+        var w = "800px";
+        var h = "550px";
+    }
+    layer.open({
+        type: 2,
+        area: [w , h],
+        fix: false, //不固定
+        maxmin: true,
+        shade:false,
+        title: title,
+        content: [url, 'no'],
+        end:function(){
+            refresh();
+        }
+    });
+}
+
+/*删除*/
+function deleUser(id){
+    layer.confirm('确定要删除吗？操作需谨慎',{shade: false},function(){
+        $.ajax({
+            type:'post',
+            dataType:'json',
+            async:true,
+            url:'/people/delete',
+            data:{
+                'id':id
+            },
+            success:function(data){
+                if(data.errorMessage === null){
+                    layer.msg('已删除!',{icon:1,time:500});
+                    refresh();
+                }else{
+                    layer.msg(data.errorMessage,{icon:2,time:1000})
+                }
+            }
+        });
+    });
+}
+
+//刷新
+function refresh(){
+    $("#userTableList").trigger("reloadGrid");
+};
+</script>
+</body>
