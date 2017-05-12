@@ -48,3 +48,44 @@
 		</div>
 - html拼接
  `onclick=\"test(&quot;"+files[i].name+"&quot;)\"`
+
+## 循环 ##
+### $.each( object||array, callback ) ###
+
+
+	    $.each([52, 97], function(index, value) {
+	        alert(index + ': ' + value);
+	    });
+		
+		var arr1 = [ “one”, “two”, “three”, “four”, “five” ];
+		$.each(arr1, function(){
+		alert(this);
+		});
+		输出：one   two  three  four   five
+	
+		var arr2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+		$.each(arr2, function(i, item){
+		alert(item[0]);
+		});
+		输出：1   4   7
+	
+		var obj = { one:1, two:2, three:3, four:4, five:5 };
+		$.each(obj, function(key, val) {
+		alert(obj[key]);
+		});
+		输出：1   2  3  4  5
+
+
+### jQuery 遍历 - each() 方法主要用于DOM遍历，each() 方法规定为每个匹配元素规定运行的函数。  ###
+
+* 语法：$(selector).each(function(index,element))
+
+		    $("li").each(function(){
+		        alert($(this).text())
+		    });
+
+			$(“input[name=’ch’]”).each(function(i){
+			if($(this).attr(‘checked’)==true)
+			{
+				//一些操作代码
+				}
