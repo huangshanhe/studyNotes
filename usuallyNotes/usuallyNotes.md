@@ -1,9 +1,44 @@
 # 经常容易忘记的知识点以及快捷键 #
----
+
 ## 快捷键 ##
 **新建文件窗口:ctrl+n**
+
 ## sublime快速整理代码(缩进) ##
 	{ "keys": ["ctrl+q"], "command": "reindent" }
+
+## javascript学习笔记 ##
+
+- switch 语句会使用恒等计算符(===)进行比较:
+
+		var x = 10;
+		switch(x) {
+		    case "10": alert("Hello");
+		}//该实例由于类型不一致不会执行 alert 弹窗
+
+- 变量提升：函数声明和变量声明总是会被解释器悄悄地被"提升"到方法体的最顶部。函数及变量的声明都将被提升到函数的最顶部。JavaScript 中，变量可以在使用后声明，也就是变量可以先使用再声明。
+
+		x = 5; // 变量 x 设置为 5		
+		elem = document.getElementById("demo"); // 查找元素 
+		elem.innerHTML = x;                     // 在元素中显示 x		
+		var x; // 声明 x
+- 但是JavaScript 只有声明的变量会提升，初始化的不会。
+
+		var x = 5; // 初始化 x
+		var y = 7; // 初始化 y
+		elem = document.getElementById("demo"); // 查找元素 
+		elem.innerHTML = x + " " + y;           // 显示 x 和 y
+		结果：5 7
+
+		var x = 5; // 初始化 x
+		elem = document.getElementById("demo"); // 查找元素 
+		elem.innerHTML = x + " " + y;           // 显示 x 和 y
+		var y = 7; // 初始化 y
+		结果：5 undefine
+- c
+- d
+- e
+- f
+
 ##代码片段
 - ajax
 
