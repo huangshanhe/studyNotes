@@ -40,7 +40,21 @@
 		function myFunction(y) {
 		    return y * y;
 		}
-- d
+- Arguments 对象JavaScript 函数有个内置的对象 arguments 对象。argument 对象包含了函数调用的参数数组。通过这种方式你可以很方便的找到最大的一个参数的值：实例
+
+		x = findMax(1, 123, 500, 115, 44, 88); 
+		function findMax() {
+		    var i, max = arguments[0];
+
+		    if(arguments.length < 2) return max;
+
+		    for (i = 0; i < arguments.length; i++) {
+			if (arguments[i] > max) {
+			    max = arguments[i];
+			}
+		    }
+		    return max;
+		}
 - e
 - f
 
