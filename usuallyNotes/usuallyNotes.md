@@ -34,7 +34,12 @@
 		elem.innerHTML = x + " " + y;           // 显示 x 和 y
 		var y = 7; // 初始化 y
 		结果：5 undefine
-- c
+- 函数提升（Hoisting）在之前的教程中我们已经了解了 "hoisting(提升)"。提升（Hoisting）是 JavaScript 默认将当前作用域提升到前面去的的行为。提升（Hoisting）应用在变量的声明与函数的声明。因此，函数可以在声明之前调用：
+
+		myFunction(5);
+		function myFunction(y) {
+		    return y * y;
+		}
 - d
 - e
 - f
