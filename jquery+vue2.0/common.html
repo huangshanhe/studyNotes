@@ -1,0 +1,88 @@
+<<!DOCTYPE html>
+<html>
+<head>
+    <title>common</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<div id="common">
+    <div v-if="flag == true" @click="commonClick(event)" :data-id="item.id">
+        <span>common</span>
+        <ul v-for="item in dataList">
+            <li id="item.id"></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" href="jquery"></script>
+<script type="text/javascript" href="vue/vue.min.js"></script>
+<script type="text/javascript">
+  //jquery
+  var Main = {
+            init: function() {
+                this.a();
+                this.b();
+                this.c();
+            },
+            a: function(){
+                $(document).on('click', '.J_SubmitBtn', function() {
+                //点击事件
+                });
+            },
+            b: function(){
+                //b方法
+            },
+            c: function(){
+                //b方法
+            }
+            Main.init();
+    }
+//vue
+ var vm = new Vue({
+            el: '#J_VueApp',
+            data: {
+                people:{
+                    name:'',
+                    age:'',
+                    desc:''
+                },
+                array: [],
+                initDate: '',
+                flag: true
+            },
+            methods: {
+
+                commonClick: function(event){
+                    var _this = $(event.target).firstChild(),
+                        depth = _this.data('id');
+                        alert(depth);
+                    //点击事件@click
+                },
+                two : function(){
+
+                }
+            },
+            beforeCreate: {
+                //创建实例前
+            },
+            created: {
+                //创建时
+            },
+            mounted: {
+                //el 被新创建的 vm.$el 替换，并||挂载||到实例上去之后调用该钩子。
+            },
+            computed:{
+                //计算
+            },
+            beforeDestroy:{
+                //实例销毁前
+            },
+            destroyed: {
+                //实例销毁后
+            }
+        });
+
+</script>
+</body>
+</html>
+
