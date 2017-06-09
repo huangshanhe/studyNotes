@@ -1,4 +1,4 @@
-# for-in ifelse逻辑+jquery$('.XX, .XX, .xx') 晓聪教 #
+﻿# for-in ifelse逻辑+jquery$('.XX, .XX, .xx') 晓聪教 #
 
 - for-in
 
@@ -27,4 +27,4 @@
 
 - if else 尽可能合并相同部分
 
-- jquery .#合并
+- jquery .#合并 jquery$('.XX, .XX, .xx') 晓聪教 
