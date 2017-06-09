@@ -27,4 +27,4 @@
 
 - if else 尽可能合并相同部分
 
-- jquery .#合并 jquery$('.XX, .XX, .xx') 晓聪教 
+- jquery .#合并 jquery$('.XX, .XX, .xx') (晓聪教) 
