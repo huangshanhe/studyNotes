@@ -30,3 +30,11 @@
 
 - 子元素选择过滤器 :nth-child
 - 表单对象属性过滤器 :checked :selected :enabled :disabled
+
+	retrun true； 返回正确的处理结果。
+	return false；分会错误的处理结果，终止处理。
+	return；把控制权返回给页面。
+	return false一般是用来取消默认动作的。
+	比如你单击一个链接除了触发你的onclick事件，如果return false的话，就会阻止跳转。
+	所以return false基本的作用是取消对象的默认动作。
+	return和基本的语言中的return类似，执行到return就返回了，后面的语句将不执行了。
