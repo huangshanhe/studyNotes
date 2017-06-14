@@ -6,6 +6,8 @@
 
 **如果一个方法定义了但是报错undefine，可能和vue冲突，或者和框架冲突，尝试换个位置，放在vue外面或者框架外面**
 
+**jquery选择器-----eq等于-----gt大于------lt小于-----**
+
 ## sublime快速整理代码(缩进) ##
 	{ "keys": ["ctrl+q"], "command": "reindent" }
 
