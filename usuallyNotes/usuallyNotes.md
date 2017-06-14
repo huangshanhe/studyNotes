@@ -6,7 +6,7 @@
 
 **如果一个方法定义了但是报错undefine，可能和vue冲突，或者和框架冲突，尝试换个位置，放在vue外面或者框架外面**
 
-**attr()和addClass()区别：attr('class','')直接全部覆盖，而addClass()在原来基础上追加class**
+**attr()和addClass()区别：attr('class','')直接全部覆盖，而addClass()在原来基础上追加class,removeClass('a b c')空格隔开**
 
 **jquery选择器-----eq等于-----gt大于------lt小于-----**
 
