@@ -41,10 +41,10 @@
 	
 - toggle()简化代码
 
-	$(function(){
-		 $("#panel h5.head").toggle(function(){
-		   $(this).next().toggle();
-		 },function(){
-		   $(this).next().toggle();
-		 })
-	 }); 
+		$(function(){
+			 $("#panel h5.head").toggle(function(){
+			   $(this).next().toggle();
+			 },function(){
+			   $(this).next().toggle();
+			 })
+		 }); 
