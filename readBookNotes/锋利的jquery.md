@@ -21,12 +21,29 @@
 
 - jQuery.noConflict()将控制权交给其他库
 
+## 选择器是jquery的根基 ##
 
-- **选择器过滤器 $="value"以value技术 ^="value"以value开始  eq[1]下标为1**
+- CSS 选择器
+- 群组选择器 E1,E2,E3{CSS}  td,p,div.a{font-size:14px;} 
+- 后代选择器 E F{}  .btn span{}
+- 通配符选择器 * {}
+
+-jquery选择器继承了CSS选择器
+-基本选择器
+-层次选择器
+
+		$("ancestor descendant") 后代元素
+		$("parent > child")  子元素
+		$(“prev + next”) 下一个元素 可以直接用.next()方法
+		$(”prev̚siblings”) 后面的同辈元素
+
+- **选择器过滤器 $="value"以value结束 ^="value"以value开始  eq(1)下标为1**
 
 		属性选择过滤器 [attribute=value]
 		$("div[id][title$='test']")选取属性有id并且属性title以"test"结束的<div>元素
 
+- 过滤选择器 :
+- 属性选择器 []
 
 - 子元素选择过滤器 :nth-child
 - 表单对象属性过滤器 :checked :selected :enabled :disabled
