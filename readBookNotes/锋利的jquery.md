@@ -40,6 +40,7 @@
 	return和基本的语言中的return类似，执行到return就返回了，后面的语句将不执行了。
 	
 - toggle()简化代码
+
 	$(function(){
 		 $("#panel h5.head").toggle(function(){
 		   $(this).next().toggle();
