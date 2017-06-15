@@ -59,3 +59,64 @@
 		 slideToggle( speed, [ easing ], [callback] )
 		 fadeTo( speed, opacity, [callback] )
 		 fadeToggle ( speed, [ easing ], [callback] )
+		 
+		 $(function(){
+		 var $comment = $('#comment'); //获取评论框
+		 $('.bigger').click(function(){ //“放大”按钮绑定单击事件
+			 if(!$comment.is(":animated")){ //判断是否处于动画
+		 		if( $comment.height() < 500 ){
+		 			//重新设置高度，在原有的基础上加 50
+		 		$comment.animate({ height : "+=50" },400);
+				 }
+			 }
+		 })
+		 $('.smaller').click(function(){ //“缩小”按钮绑定单击事件
+		 if(!$comment.is(":animated")){ //判断是否处于动画
+		 	if( $comment.height() > 50 ){
+		 		//重新设置高度，在原有的基础上减 50
+				 $comment.animate({ height : "-=50" },400);
+		 		}
+			 }
+		 });
+		}); 
+
+- jquery表单应用
+表单校验-现在有组件可用就不用自己写了
+网页选项卡就是通过显示和隐藏来控制 也可以换肤
+
+-jquery中的ajax global是否触发ajax全局事件，默认true
+
+使用jQuery进行ajax编码的时候，经常会使用到这3个API，本文学习下这3个API的使用方式。如下的HTML片段，如果我们将holder表单下的控件值提交到服务器。就需要用到serialize或者serializeArray了。
+
+		[html] view plain copy
+		<form id="holder">  
+		  <input type="text" name="a" value="1"/>  
+		  <div>  
+		    <input type="text" name="b" value="2" id="b" />  
+		  </div>  
+		  <input type="hidden" name="c" value="3" id="c" />  
+		  <div>  
+		    <input type="checkbox" name="f" value="8" checked="true"/>  
+		    <input type="checkbox" name="f" value="9" checked="true"/>  
+		  </div>  
+		</form>  
+		
+		$("#holder").serialize()   输出结果是 a=1&b=2&c=3&f=8&f=9
+
+		$("#holder").serializeArray() 输出结果如下：
+
+		[plain] view plain copy
+		[   
+		  {name: 'a', value: '1'},   
+		  {name: 'b', value: '2'},  
+		  {name: 'c', value: '3'},  
+		  {name: 'f', value: '8'},  
+		  {name: 'f', value: '9'}  
+		]  
+		
+		$.param()方法是serialize()方法的核心，用来对一个数组或对象按照key/value进行序列化。
+		比如将一个普通的对象序列化：
+		var obj = {a:1,b:2,c:3};
+		var k = $.param(obj);
+		alert(k);    //输出a=1&b=2&c=3
+
