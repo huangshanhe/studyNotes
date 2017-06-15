@@ -1,4 +1,4 @@
-# 锋利的jquery先开始 #
+# 锋利的jquery #
 
 - jquery由John Resig创建于2006年1月
 
@@ -47,7 +47,7 @@
 			 },function(){
 			   $(this).next().toggle();
 			 })
-		 }); 
+		 });  
 		 
 - jquery动画 show() hide() 'slow' 'normal' 'fast' 分别是 0.6 0.4 0.2秒 或者 show(10000) 10s  .fadeIn .fadeOut淡入淡出
 - animate animate(params, speed , callback); delay(1000)延迟一秒 
@@ -84,7 +84,7 @@
 表单校验-现在有组件可用就不用自己写了
 网页选项卡就是通过显示和隐藏来控制 也可以换肤
 
--jquery中的ajax global是否触发ajax全局事件，默认true
+- jquery中的ajax global是否触发ajax全局事件，默认true
 
 使用jQuery进行ajax编码的时候，经常会使用到这3个API，本文学习下这3个API的使用方式。如下的HTML片段，如果我们将holder表单下的控件值提交到服务器。就需要用到serialize或者serializeArray了。
 
@@ -120,3 +120,127 @@
 		var k = $.param(obj);
 		alert(k);    //输出a=1&b=2&c=3
 
+
+- jquery扩展 mobile html5  (jqMobi Zeoto.js phoneGap)
+
+
+# jquery性能优化(当用jquery开发一个复杂的动画和web应用,jquery可能成为性能上的终极噩梦) #
+
+- 选择最佳选择器  如$("#id")性能最佳
+
+- 避免使用：
+
+		$("[attribute=value]") 
+		$("#content").find(":hidden");
+		$("a.button").filter(":animated"); 
+		
+- 链式操作 全局缓存dom对象或者jquery对象
+
+		var $activeBlight = $("#trafficBlight input.on");
+		$activeBlight.bind("click", function(){ ... })
+		 .css({
+			 "border":"1px dashed yellow",
+			 "background-color":"orange"
+		 })
+		 .fadeIn("slow"); 
+	
+- 用 for 替代 each()
+- 写成插件复用
+- 使用 join('')代替拼接
+- 有时候使用原生javascript方法
+
+		var $cr = $("#cr"); //jQuery 对象
+		var cr = $cr.get(0); //DOM 对象，获取 $cr[0]
+		$cr.click(function(){
+		 if( cr.checked ){ //原生的 JavaScript 方式判断
+		 	alert("感谢你的支持!你可以继续操作!");
+		 	}
+		}) 
+
+# jquery技巧 基本都基于 $(document).ready(function() {}); #
+
+- 判断元素是否存在
+
+		$(document).ready(function() {
+			 if ($('#id').length){
+		 // do something
+		 }
+		}); 
+- div居中
+
+		$(document).ready(function() {
+		 jQuery.fn.center = function () {
+			 this.css("position","absolute");
+			 this.css("top", ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + "px");
+			 this.css("left", ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + "px");
+			 return this;
+		 }
+		 //use
+		 $("#XY").center();
+		}); 
+		
+- 回车表单提交
+
+		$(document).ready(function() {
+			 $("input").keyup(function(e){
+			 if(e.which=="13") {
+				alert("回车提交!")
+				}
+			 })
+		}); 
+		
+- 设置全局 ajax参数
+
+		$("#load").ajaxStart(function(){
+			 showLoading(); //显示 loading
+			 disableButtons(); //禁用按钮
+		});
+		$("#load").ajaxComplete(function(){
+			 hideLoading(); //隐藏 loading
+			 enableButtons(); //启用按钮
+		}); 
+		
+- 获取选中下拉框
+
+		$('#someElement').find('option:selected');
+		$('#someElement option:selected'); 
+		
+- 切换复选框
+
+		var tog = false;
+		$('button').click(function(){
+			 $("input[type=checkbox]").attr("checked",!tog);
+			 tog = !tog;
+		}); 
+		
+- 使用siblings()来选择同辈元素
+
+		// 不这样做
+		$('#nav li').click(function(){
+			 $('#nav li').removeClass('active');
+			 $(this).addClass('active');
+		});
+		//替代做法是
+		$('#nav li').click(function(){
+			 $(this).addClass('active')
+			 .siblings().removeClass('active');
+		}); 
+
+- 个性化链接
+
+		$(document).ready(function(){
+			 $("a[href$='pdf']").addClass("pdf");
+			 $("a[href$='zip']").addClass("zip");
+			 $("a[href$='psd']").addClass("psd");
+		}); 
+		
+- 在一段时间后自动显示隐藏 setTimeout
+
+		//这是 1.3.2 中我们使用 setTimeout 来实现的方式
+		setTimeout(function() {
+		 $('div').fadeIn(400)
+		}, 3000);
+		//而在 1.4 之后的版本可以使用 delay()这一功能来实现的方式
+		$("div").slideUp(300).delay(3000).fadeIn(400); 
+		
+- html5本地存储新属性 localStorage sessionStorage
