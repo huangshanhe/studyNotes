@@ -48,3 +48,14 @@
 			   $(this).next().toggle();
 			 })
 		 }); 
+		 
+- jquery动画 show() hide() 'slow' 'normal' 'fast' 分别是 0.6 0.4 0.2秒 或者 show(10000) 10s  .fadeIn .fadeOut淡入淡出
+- animate animate(params, speed , callback); delay(1000)延迟一秒 
+
+		$(this).animate({left: "500px"}, 3000)
+		 .animate({height: "200px"}, 3000); 
+		  toggle( speed, [callback] )
+		  
+		 slideToggle( speed, [ easing ], [callback] )
+		 fadeTo( speed, opacity, [callback] )
+		 fadeToggle ( speed, [ easing ], [callback] )
