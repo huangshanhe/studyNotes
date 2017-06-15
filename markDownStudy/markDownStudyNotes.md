@@ -40,5 +40,6 @@
 		Main.init();
 
 
-##**图片**
+# **图片** #
+
 ![八哥犬](http://e.hiphotos.baidu.com/baike/w%3D268%3Bg%3D0/sign=e4c5be4c00f79052ef1f403834c8b0f7/f9dcd100baa1cd11b6eabf7fb012c8fcc3ce2d15.jpg)
