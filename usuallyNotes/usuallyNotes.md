@@ -10,6 +10,8 @@
 
 **jquery选择器-----eq等于-----gt大于------lt小于-----**
 
+**@submit.prevent="test" 表单提交前执行**
+
 ## sublime快速整理代码(缩进) ##
 	{ "keys": ["ctrl+q"], "command": "reindent" }
 
