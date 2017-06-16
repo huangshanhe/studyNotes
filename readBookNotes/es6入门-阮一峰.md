@@ -51,3 +51,56 @@ let命令、const命令、class命令声明的全局变量，不属于顶层对�
     const global = getGlobal();
     上面代码将顶层对象放入变量global。
 
+- 变量的解构赋值
+
+        数组的解构赋值
+        对象的解构赋值
+        字符串的解构赋值
+        数值和布尔值的解构赋值
+        函数参数的解构赋值
+        圆括号问题
+        用途
+        
+        （1）交换变量的值
+
+        let x = 1;
+        let y = 2;
+
+        [x, y] = [y, x];
+        上面代码交换变量x和y的值，这样的写法不仅简洁，而且易读，语义非常清晰。
+
+        （2）从函数返回多个值
+
+        函数只能返回一个值，如果要返回多个值，只能将它们放在数组或对象里返回。有了解构赋值，取出这些值就非常方便。
+
+        // 返回一个数组
+
+        function example() {
+          return [1, 2, 3];
+        }
+        let [a, b, c] = example();
+
+        // 返回一个对象
+
+        function example() {
+          return {
+            foo: 1,
+            bar: 2
+          };
+        }
+        let { foo, bar } = example();
+        
+        （4）提取JSON数据
+
+        解构赋值对提取JSON对象中的数据，尤其有用。
+
+        let jsonData = {
+          id: 42,
+          status: "OK",
+          data: [867, 5309]
+        };
+
+        let { id, status, data: number } = jsonData;
+
+        console.log(id, status, number);
+        // 42, "OK", [867, 5309]
