@@ -70,4 +70,25 @@
 		 }
 		} 
 
-1. 
+- NaN not a number isNaN()
+- 数值转换 Number() parseInt() parseFloat()
+
+		var num1 = parseInt("AF", 16); //175第二个参数按照多少进制转换
+		var num2 = parseInt("AF"); //NaN 
+		alert(!!"blue"); //true
+		alert(!!0); //false
+		alert(!!NaN); //false
+		alert(!!""); //false
+		alert(!!12345); //true 
+		
+- 条件操作符 ? variable = boolean_expression ? true_value : false_value;   boolean_expression为true则值为true_value否则反之。
+
+- for-in语句 遍历对象
+
+		var obj = {a:1,
+			   b:2,
+			   c:3};
+		for(var i in obj){
+		    alert(i);//a,b,c
+		    alert(obj[i]);//1,2,3
+		}
