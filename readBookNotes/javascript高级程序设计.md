@@ -143,65 +143,65 @@
 
 - 变量值可以被复制，指向同一个对象
 
-	var obj1 = new Object();
-	var obj2 = obj1;
-	obj1.name = "Nicholas";
-	alert(obj2.name); //"Nicholas" 
+		var obj1 = new Object();
+		var obj2 = obj1;
+		obj1.name = "Nicholas";
+		alert(obj2.name); //"Nicholas" 
 	
 - 检测类型 typeof instanceof
 
 - 没有块级作用域
 
-	if (true) {
-	 var color = "blue";
-	}
-	alert(color); //"blue" 
+		if (true) {
+		 var color = "blue";
+		}
+		alert(color); //"blue" 
 	
 - 栈方法 LIFO(Last-In-First-Out，后进先出) push() pop() shift() unshift()
 
-	push()//推入并返回整个数组
-	pop()//取得数组最后一项并返回移除最后一项后的数组
-	shift()//取得数组第一项并返回移除第一项后的数组
-	unshift()//取得数组第一项并返回增加第一项后的数组
-	
-	concat()//创建副本并返回新增后的整个数组
-	var colors = ["red", "green", "blue"];
-	var colors2 = colors.concat("yellow", ["black", "brown"]);
-	alert(colors); //red,green,blue
-	alert(colors2); //red,green,blue,yellow,black,brown 
-	
-	slice(1,4)//返回数组1-4的值，不改变原数组
-	splice//(下标,几项,插入)
-	removed = colors.splice(1, 0, "yellow", "orange"); //从第一项开始插入两项
-	
-	reverse()֖//反过来 
-	sort()//排序，但是
-	
-	function compare(value1, value2) {
-	 if (value1 < value2) {
-	 return -1;
-	 } else if (value1 > value2) {
-	 return 1;
-	 } else {
-	 return 0;
-	 }
-	}
+		push()//推入并返回整个数组
+		pop()//取得数组最后一项并返回移除最后一项后的数组
+		shift()//取得数组第一项并返回移除第一项后的数组
+		unshift()//取得数组第一项并返回增加第一项后的数组
 
-	var values = [0, 1, 5, 10, 15];
-	values.sort(compare);
-	alert(values); //0,1,5,10,15 
+		concat()//创建副本并返回新增后的整个数组
+		var colors = ["red", "green", "blue"];
+		var colors2 = colors.concat("yellow", ["black", "brown"]);
+		alert(colors); //red,green,blue
+		alert(colors2); //red,green,blue,yellow,black,brown 
+
+		slice(1,4)//返回数组1-4的值，不改变原数组
+		splice//(下标,几项,插入)
+		removed = colors.splice(1, 0, "yellow", "orange"); //从第一项开始插入两项
+
+		reverse()֖//反过来 
+		sort()//排序，但是
+
+		function compare(value1, value2) {
+		 if (value1 < value2) {
+		 return -1;
+		 } else if (value1 > value2) {
+		 return 1;
+		 } else {
+		 return 0;
+		 }
+		}
+
+		var values = [0, 1, 5, 10, 15];
+		values.sort(compare);
+		alert(values); //0,1,5,10,15 
 	
 - 位置方法indexOf()、lastIndexOf()。//分别是从头开始和末尾开始第一次出现的位置--可以是数组或者字符串
 
 # **面向对象** #
 	
-	Object.defineProperty()//访问器属性--设置后严格模式下报错，非严格模式下什么也不发生
-		Configurable//能否用delete
-		Enumerable//能否枚举 for-in
-		get//读
-		set//写
-		writeable//读写
-		value//指定的值
+		Object.defineProperty()//访问器属性--设置后严格模式下报错，非严格模式下什么也不发生
+			Configurable//能否用delete
+			Enumerable//能否枚举 for-in
+			get//读
+			set//写
+			writeable//读写
+			value//指定的值
 
 - 工厂模式
 - 构造函数模式
@@ -218,25 +218,28 @@
 - 寄生式继承
 - 寄生组合式继承//最常用最好
 
-	function inheritPrototype(subType, superType){
-		 var prototype = object(superType.prototype); //创建对象
-		 prototype.constructor = subType; //增强对象
-		 subType.prototype = prototype; //指定对象
-	}
+		function inheritPrototype(subType, superType){
+			 var prototype = object(superType.prototype); //创建对象
+			 prototype.constructor = subType; //增强对象
+			 subType.prototype = prototype; //指定对象
+		}
 	
-	function SuperType(name){
-	 this.name = name;
-	 this.colors = ["red", "blue", "green"];
-	}
-	SuperType.prototype.sayName = function(){
-	 alert(this.name);
-	};
-	function SubType(name, age){
-	 SuperType.call(this, name);
+		function SuperType(name){
+		 this.name = name;
+		 this.colors = ["red", "blue", "green"];
+		}
+		SuperType.prototype.sayName = function(){
+		 alert(this.name);
+		};
+		function SubType(name, age){
+		 SuperType.call(this, name);
 
-	 this.age = age;
-	}
-	inheritPrototype(SubType, SuperType);
-	SubType.prototype.sayAge = function(){
-	 alert(this.age);
-	};
+		 this.age = age;
+		}
+		inheritPrototype(SubType, SuperType);
+		SubType.prototype.sayAge = function(){
+		 alert(this.age);
+		};
+
+# **函数表达式** #
+ 
