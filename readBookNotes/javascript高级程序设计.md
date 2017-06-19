@@ -92,3 +92,49 @@
 		    alert(i);//a,b,c
 		    alert(obj[i]);//1,2,3
 		}
+
+- switch 语句 case 里可以是任何数据类型甚至是表达式
+
+		var num = 25;
+		switch (true) {
+			 case num < 0:
+				 alert("Less than 0.");
+				 break;
+			 case num >= 0 && num <= 10:
+				 alert("Between 0 and 10.");
+				 break;
+			 case num > 10 && num <= 20:
+				 alert("Between 10 and 20.");
+				 break;
+			 default:
+			 alert("More than 20.");
+		}
+		
+- 验证参数arguments个数
+
+		function howManyArgs() {
+		 alert(arguments.length);
+		}
+		howManyArgs("string", 45); //2
+		howManyArgs(); //0
+		howManyArgs(12); //1
+		
+		function doAdd() {
+		 if(arguments.length == 1) {
+		 	alert(arguments[0] + 10);
+		 } else if (arguments.length == 2) {
+		 	alert(arguments[0] + arguments[1]);
+		 }
+		}
+		doAdd(10); //20
+		doAdd(30, 20); //50 
+		
+- 没有重载，也无法实现，总被第二次覆盖
+
+		function addSomeNumber(num){
+		 return num + 100;
+		}
+		function addSomeNumber(num) {
+		 return num + 200;
+		}
+		var result = addSomeNumber(100); //300 
