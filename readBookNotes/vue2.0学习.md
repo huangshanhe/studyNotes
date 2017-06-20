@@ -14,3 +14,5 @@
     <input v-on:keyup.enter="submit">
     <!-- 缩写语法 -->
     <input @keyup.enter="submit">
+
+单文件组件 <template> <s> <c>
