@@ -42,3 +42,9 @@
         <table>
           <tr is="my-row"></tr>
         </table>
+
+- 组件引用循环
+
+        beforeCreate: function () {
+          this.$options.components.TreeFolderContents = require('./tree-folder-contents.vue')
+        }
