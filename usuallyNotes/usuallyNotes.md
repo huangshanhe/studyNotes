@@ -6,6 +6,8 @@
 
 **如果一个方法定义了但是报错undefine，可能和vue冲突，或者和框架冲突，尝试换个位置，放在vue外面或者框架外面**
 
+**直接在chrome控制台的console可以操作**
+
 **对象合并**
 
 		var dataObjec={},ruleDatas={},values={},options={};//初始化
