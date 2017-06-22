@@ -24,3 +24,12 @@
         methods是个方法，比如你点击事件要执行一个方法，这时候就用methods,
         computed是计算属性，实时响应的，比如你要根据data里一个值随时变化做出一些处理，就用computed。
         官方文档还是得多看几遍才能更好理解。
+
+- v-bind:style直接绑定到一个样式对象通常更好，让模板更清晰：
+        <div v-bind:style="styleObject"></div>
+        data: {
+          styleObject: {
+            color: 'red',
+            fontSize: '13px'
+          }
+        }
