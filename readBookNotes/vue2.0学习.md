@@ -18,3 +18,9 @@
 单文件组件: template <script> <style scoped> 需要 webPack 解析
 
 - 在 .vue 组件, data 必须是一个函数，它return（返回一个对象），这个返回的对象的数据，供组件实现。
+
+- methods和computed区别
+
+        methods是个方法，比如你点击事件要执行一个方法，这时候就用methods,
+        computed是计算属性，实时响应的，比如你要根据data里一个值随时变化做出一些处理，就用computed。
+        官方文档还是得多看几遍才能更好理解。
