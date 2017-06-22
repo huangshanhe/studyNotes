@@ -23,7 +23,7 @@
 
     ②如果使用filter()方法：
     var result = $("div").filter(".rain");
-    alert(result .html() );
+    alert(result.html() );
     结果:<p>测试2</p>
 
 
