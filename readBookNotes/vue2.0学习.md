@@ -1,5 +1,7 @@
 # vue2.0学习 #
 
+- 核心:组件 props down, events up 
+
 绑定style
 
     <div v-bind:style="styleObject"></div>
