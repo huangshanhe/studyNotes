@@ -26,6 +26,7 @@
         官方文档还是得多看几遍才能更好理解。
 
 - v-bind:style直接绑定到一个样式对象通常更好，让模板更清晰：
+
         <div v-bind:style="styleObject"></div>
         data: {
           styleObject: {
