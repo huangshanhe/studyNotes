@@ -8,6 +8,11 @@
 
 **直接在chrome控制台的console可以操作**
 
+**获取url里的参数**
+
+		var str = location.search.split('='),
+		    projectId = str[1];
+
 **对象合并**
 
 		var dataObjec={},ruleDatas={},values={},options={};//初始化
