@@ -8,6 +8,12 @@
 
 **直接在chrome控制台的console可以操作**
 
+**背景图样式**
+
+		.bg-pic{
+			background: url("a.png") no-repeat left center;
+		}
+
 **获取url里的参数**
 
 		var str = location.search.split('='),
