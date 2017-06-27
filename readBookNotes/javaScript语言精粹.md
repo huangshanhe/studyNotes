@@ -8,18 +8,21 @@
 
 - 数组的长度可扩展 var arry=['0':zero,'1':one,'2':two]
   
-      数组的删除如果要下标重新排列用splice,返回的是
-      被删除的元素的数组。
-            testA: function(){
-                var test = [1,2,3];
-                var aa = test.splice(1,1,"aa","bb").length;
-                var bb =test;
-                alert(aa);//2
-                alert(bb);//1,aa,bb,3
-            }
-      for in 可能会获取到原型链中的意外属性，所以用for比较好
-      我们可以在array数组方法库的基础上，加自定义方法
-      split 可以限制分割片段长度
-                var test = '|a|b|c|d|e!';
-                var a = test.split('|',3);
-                alert(a);// ,a,b
+          数组的删除如果要下标重新排列用splice,返回的是
+          被删除的元素的数组。
+
+                testA: function(){
+                    var test = [1,2,3];
+                    var aa = test.splice(1,1,"aa","bb").length;
+                    var bb =test;
+                    alert(aa);//2
+                    alert(bb);//1,aa,bb,3
+                }
+
+          for in 可能会获取到原型链中的意外属性，所以用for比较好
+          我们可以在array数组方法库的基础上，加自定义方法
+          split 可以限制分割片段长度
+
+                    var test = '|a|b|c|d|e!';
+                    var a = test.split('|',3);
+                    alert(a);// ,a,b
