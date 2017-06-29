@@ -32,4 +32,21 @@ if(typeof(someval) !=="undefined"&&someval){}会更好，具体进不进if看需
 - 访问对象的属性可以用点.也可以用[]推荐使用[key]/['key'][]里加''不推荐
 - 声明一个构造函数的时候记得new 否则this指向全局对象，会报undefined
 -typeof 测试数据基本类型 instanceof测试一个对象是不是由一个构造函数所创建的
--
+-call 和 apply区别就是传参: parent.call(son,parameter); 父函数把所有属性和方法都继承给子函数
+
+                function Animal(name)
+                {
+                    this.name=name;
+                    this.showName=function()
+                {
+                    alert(this.name)
+                }
+                }
+                    function Cat(name)
+                {
+                    Animal.call(this,name); //将Animal应用到Cat上，因此Cat拥有了Animal的所有属性和方法
+                }
+                var cat = new Cat(“Black Cat”);
+                cat.showName(); //浏览器弹出Black Cat
+
+- a
