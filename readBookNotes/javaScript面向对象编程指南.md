@@ -1,5 +1,6 @@
-## javaScript面向对象编程指南 ##
+# javaScript面向对象编程指南 #
 
+## 基础 ##
 - javaScript不是传统的面向对象语言，而是一套独特的原型系统。
 - 面向对象编程（Object Oriented Programming，OOP，面向对象程序设计）是一种计算机编程架构
 - 字符串与数字转换偷懒 number+"" 或者 string乘以1
@@ -54,7 +55,7 @@ if(typeof(someval) !=="undefined"&&someval){}会更好，具体进不进if看需
                     function find(arr){
                         var newArr = [];
                         for (var i = 0; i < arr.length; i++) {
-                            if (newArr.indexOf(arr[i]) == -1 ) {//如果没找到返回-1，放进去，找到就不放进去了
+                            if (newArr.indexOf(arr[i]) === -1 ) {//如果没找到返回-1，放进去，找到就不放进去了
                                 newArr.push(arr[i]);
                             }
                         }
@@ -65,4 +66,6 @@ if(typeof(someval) !=="undefined"&&someval){}会更好，具体进不进if看需
                     }
                     find(arr);
                     
-- 
+- Math.random() Math.E Math.PI等等 Date 正则表达式RegExp(regular expression)
+
+## 原型 ##
