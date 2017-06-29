@@ -47,6 +47,22 @@ if(typeof(someval) !=="undefined"&&someval){}会更好，具体进不进if看需
                         Animal.call(this,name); //将Animal应用到Cat上，因此Cat拥有了Animal的所有属性和方法
                     }
                 var cat = new Cat('huangsh');
-                cat.showName(); //浏览器弹出Black Cat
+                cat.showName(); //浏览器弹出 huangsh
+- string indexOf('条件',从哪开始)第一次出现的索引位置 toLowerCase() toUpperCase()//去重排序见下
 
-- a
+                    var arr = [1,3,4,5,6,7,4,3,2,4,5,6,7,3,2];
+                    function find(arr){
+                        var newArr = [];
+                        for (var i = 0; i < arr.length; i++) {
+                            if (newArr.indexOf(arr[i]) == -1 ) {//如果没找到返回-1，放进去，找到就不放进去了
+                                newArr.push(arr[i]);
+                            }
+                        }
+                        newArr.sort(function(a,b){//排序
+                            return a>b;
+                        })
+                        console.log(newArr);
+                    }
+                    find(arr);
+                    
+- 
