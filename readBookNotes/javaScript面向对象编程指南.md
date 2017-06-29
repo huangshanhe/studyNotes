@@ -18,16 +18,16 @@ if(typeof(someval) !=="undefined"&&someval){}会更好，具体进不进if看需
 - 一次性任务 自调用  {function a (){}}()
 - 数组和对象很像，无非是对象是{} key 可以自定义，数组是自然数。
     
-        var o = {name:'aa'};
-        var o = {"name":'aa'};
-        var o = {'name':'aa'};
+                var o = {name:'aa'};
+                var o = {"name":'aa'};
+                var o = {'name':'aa'};
         
         以上三者是一样的
         但是如果Key是特殊字符，必须加''否则报错
         
-        var o = {'!@#$%&&':true,
-                 'yes or no':false
-                 };
+                var o = {'!@#$%&&':true,
+                         'yes or no':false
+                         };
 
 - 访问对象的属性可以用点.也可以用[]推荐使用[key]/['key'][]里加''不推荐
 - 声明一个构造函数的时候记得new 否则this指向全局对象，会报undefined
