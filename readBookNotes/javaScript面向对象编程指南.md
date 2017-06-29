@@ -69,3 +69,8 @@ if(typeof(someval) !=="undefined"&&someval){}会更好，具体进不进if看需
 - Math.random() Math.E Math.PI等等 Date 正则表达式RegExp(regular expression)
 
 ## 原型 ##
+
+- hasOwnProperty('') propertyIsEnumberable 判断是否可以枚举
+- 在添加相关方法和属性的时候提前检测一下是否有该方法 if(!String.prototype.reverse){}
+- BOM是Browser Object Model的缩写，简称浏览器对象模型
+- DOM 文档对象模型（Document Object Model，简称DOM）
