@@ -1,4 +1,4 @@
-## javaScript面向对象编程 ##
+## javaScript面向对象编程指南 ##
 
 - javaScript不是传统的面向对象语言，而是一套独特的原型系统。
 - 面向对象编程（Object Oriented Programming，OOP，面向对象程序设计）是一种计算机编程架构
@@ -16,3 +16,4 @@ if(typeof(someval) !=="undefined"&&someval){}会更好，具体进不进if看需
 - while(先条件再执行)和 do-while(先执行再条件) 如果 i直接赋值为11  while不执行 而 do-while 执行一次后 i=12 一般不用
 - parseInt(val,几进制(10、16))  parseFloat  转换失败返回 NaN
 - 一次性任务 自调用  {function a (){}}()
+- 
