@@ -35,18 +35,18 @@ if(typeof(someval) !=="undefined"&&someval){}会更好，具体进不进if看需
 -call 和 apply区别就是传参: parent.call(son,parameter); 父函数把所有属性和方法都继承给子函数
 
                 function Animal(name)
-                {
-                    this.name=name;
-                    this.showName=function()
-                {
-                    alert(this.name)
-                }
-                }
-                    function Cat(name)
-                {
-                    Animal.call(this,name); //将Animal应用到Cat上，因此Cat拥有了Animal的所有属性和方法
-                }
-                var cat = new Cat(“Black Cat”);
+                    {
+                        this.name=name;
+                        this.showName=function()
+                        {
+                            alert(this.name)
+                        }
+                    }
+                  function Cat(name)
+                    {
+                        Animal.call(this,name); //将Animal应用到Cat上，因此Cat拥有了Animal的所有属性和方法
+                    }
+                var cat = new Cat('huangsh');
                 cat.showName(); //浏览器弹出Black Cat
 
 - a
