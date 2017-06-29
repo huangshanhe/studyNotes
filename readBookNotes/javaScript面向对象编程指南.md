@@ -21,9 +21,15 @@ if(typeof(someval) !=="undefined"&&someval){}会更好，具体进不进if看需
         var o = {name:'aa'};
         var o = {"name":'aa'};
         var o = {'name':'aa'};
+        
         以上三者是一样的
         但是如果Key是特殊字符，必须加''否则报错
         
         var o = {'!@#$%&&':true,
                  'yes or no':false
                  };
+
+- 访问对象的属性可以用点.也可以用[]推荐使用[key]/['key'][]里加''不推荐
+- 声明一个构造函数的时候记得new 否则this指向全局对象，会报undefined
+-typeof 测试数据基本类型 instanceof测试一个对象是不是由一个构造函数所创建的
+-
