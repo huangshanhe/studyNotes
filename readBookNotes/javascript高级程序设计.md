@@ -235,7 +235,7 @@
 - 寄生组合式继承//最常用最好
 
 		function inheritPrototype(subType, superType){
-			 var prototype = object(superType.prototype); //创建对象
+			 var prototype = Object.create(superType.prototype); //创建对象
 			 prototype.constructor = subType; //增强对象
 			 subType.prototype = prototype; //指定对象
 		}
@@ -256,6 +256,11 @@
 		SubType.prototype.sayAge = function(){
 		 alert(this.age);
 		};
+		
+		1. 创建超类型原型的副本。
+		2. 为创建的副本添加constructor属性，弥补因重写原型而失去的默认的constructor属性
+		3. 将新创建的对象（即副本）赋值给子类型的原型这种方法只调用了一次SuperType构造函数，
+		instanceof 和isPrototypeOf()也能正常使用。
 
 # **函数表达式** #
  
