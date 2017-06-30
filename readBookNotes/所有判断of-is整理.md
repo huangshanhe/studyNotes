@@ -1,0 +1,134 @@
+# 所有判断of-is整理 # 
+
+## 首先是hasOwnProperty与isPrototypeOf的区别 ##
+
+- 利用hasOwnProperty判断是否有自己的属性或对象(不是继承来的)
+
+                var o =new Object();
+                o.prop="exists";
+                o.hasOwnProperty("prop");//true 自身的属性
+                o.hasOwnProperty("toString");//false 继承自Object原型上的方法
+                o.hasOwnProperty("hasOwnProperty");//false 继承自Object原型上的方法
+                Object.prototype.hasOwnProperty('toString');//true 本体
+                Object.prototype.hasOwnProperty('hasOwnProperty');//true 本体
+                
+                function A(){};
+                A.prototype.hasOwnProperty('constructor');//true;
+                var a = nwe A(); //prototype:原型  constructor 构造器  propetry属性
+                a.prototye;// undefined ------new出来的函数没有prototype属性               
+                a.constructor.prototype.hasOwnProperty('constructor');//其实a.constructor === A;//true
+
+- 利用isPropertyOf()检查一个对象是否存在一另一个对象的原型链上
+
+                var o={};
+                function Person(){};
+                var p1 =new Person();//继承自原来的原型，但是现在已经无法访问
+                Person.prototype=o;
+                var p2 =new Person();//继承自o
+                console.log(o.isPrototypeOf(p1));//false o是不是p1的原型
+                console.log(o.isPrototypeof(p2));//true o是不是p2的原型
+                console.log(Object.prototype.isPrototypeOf(p1));//true
+                console.log(Object.prototype.isPrototypeOf(p2));//true
+                
+- 总结
+
+                1.hasOwnProperty：是用来判断一个对象是否有你给出名称的属性或对象。
+                不过需要注意的是，此方法无法检查该对象的原型链中是否具有该属性，该属性必须是对象本身的一个成员。
+                
+                2.isPrototypeOf是用来判断要检查其原型链的对象是否存在于指定对象实例中，是则返回true，否则返回false。
+                
+## 其次是typeof和instanceof的区别 ##
+
+- typeof是什么?typeof 是一个操作符,主要的目的是检测一个变量是不是基本数据类型的变量,同时也可以说是确定一个变量是字符串,数值,布尔值,还是undefined
+的最佳工具。
+
+typeof 示例代码
+
+        [javascript] view plain copy
+        var a="zhangqian";  
+        var b=true;  
+        var c=10;  
+        var d;  
+        var e=null;  
+        var f=new Object();  
+  
+        alert(typeof a); //string  
+        alert(typeof b); //number  
+        alert(typeof c); //boolean  
+        alert(typeof d); //undefined  
+        alert(typeof e); //object  
+        alert(typeof f); //object  
+        
+- typeof应该注意的问题?
+   使用typeof操作符的时候,如果检测对象是函数,那么操作符返回"function" ,如果检测对象是正则表达式的时候,在Safari和Chrome中使用typeof的时候会错误的返回"function",
+其他的浏览器返回的是object.
+instanceof是什么?
+    instanceof主要的目的是检测引用类型,判断对象是Array,还是RegExp!
+instanceof示例代码?
+   
+        [javascript] view plain copy
+        var array=new Array();  
+        var object=new Object();  
+        var regexp=new RegExp();  
+        function func(){};  
+        var func1=new func();  
+
+        alert(array instanceof Array);  //true  
+        alert(object instanceof Object);  //true  
+        alert(regexp instanceof RegExp);  //true  
+        alert(func1 instanceof func);  //true  
+        
+instanceof应该注意的问题?
+    大家都知道Object是所有对象的基类,所以在alert(array instanceof Object) 返回的结果同样也是true,还有就是instanceof的语法一定不要写错了 variable instanceof constructor !
+typeof  和instanceof的联系
+     其实typeof和instanceof的目的都是检测变量的类型,两个的区别在于typeof一般是检测的是基本数据类型,instanceof主要检测的是引用类型!
+     
+ ## 最后是prototype和constructor详解附带原型链 ##
+ 
+ -首先prototype:原型 　　 constructor:构造器
+- function定义的对象有一个prototype属性，使用new生成的对象就没有这个prototype属性。
+
+                function Person(name)  
+                {  
+                   this.name=name;  
+                   this.showMe=function()  
+                        {  
+                           alert(this.name);  
+                        }  
+                };  
+
+                var one=new Person('js');  
+
+                alert(one.prototype)//undefined------new生成的对象就没有这个prototype属性。
+                alert(typeof Person.prototype);//object  
+                alert(Person.prototype.constructor);//function Person(name) {...}; 
+                //prototype属性又指向了一个prototype对象，注意prototype属性与prototype对象是两个不同的东西，要注意区别。
+                在prototype对象中又有一个constructor属性，这个constructor属性同样指向一个constructor对象，
+                而这个constructor对象恰恰就是这个function函数本身。
+                
+                你只要记住只有函数才有prototype属性,这个属性值为一个object对象实例对象时没有这个属性的，
+                实例对象通过__proto__这个内部属性（[[prototype]]）来串起一个原型链的，通过这个原型链可以查找属性，
+                方法通过new操作符初始化一个函数对象的时候就会构建出一个实例对象，
+                函数对象的prototype属性指向的对象就是这个实例对象的原型对象，也就是__proto__指向的对象
+                
+- 原型链
+
+               其实，只需要明白原型对象的结构即可：
+
+                  Function.prototype = {
+                  constructor : Function,
+                  __proto__ : parent prototype,
+                  some prototype properties: ...
+                  };
+
+                函数的原型对象constructor默认指向函数本身，原型对象除了有原型属性外，
+                为了实现继承，还有一个原型链指针_proto_，该指针指向上一层的原型对象，
+                而上一层的原型对象的结构依然类似，这样利用_proto_一直指向Object的原型对象上
+                ，而Object的原型对象用Object._proto_ = null表示原型链的最顶端，
+                如此变形成了javascript的原型链继承，同时也解释了为什么所有的javascript对象都具有Object的基本方法。
+
+-new分为三步
+
+                var one=new Person('js');
+                var one={};  
+                Person.call(one,'js');
