@@ -1,4 +1,4 @@
-# prototype和constructor详解附件原型链 #
+# prototype和constructor详解附带原型链 #
 
 -首先prototype:原型 　　 constructor:构造器
 - function定义的对象有一个prototype属性，使用new生成的对象就没有这个prototype属性。
@@ -48,4 +48,3 @@
                 var one={};  
                 Person.call(one,'js');
                 
--
