@@ -212,6 +212,22 @@
 - 稳妥构造函数模式
 
 - 原型链
+		
+		其实，只需要明白原型对象的结构即可：
+
+		    Function.prototype = {
+			constructor : Function,
+			__proto__ : parent prototype,
+			some prototype properties: ...
+		    };
+
+		函数的原型对象constructor默认指向函数本身，原型对象除了有原型属性外，
+		为了实现继承，还有一个原型链指针_proto_，该指针指向上一层的原型对象，
+		而上一层的原型对象的结构依然类似，这样利用_proto_一直指向Object的原型对象上
+		，而Object的原型对象用Object._proto_ = null表示原型链的最顶端，
+		如此变形成了javascript的原型链继承，同时也解释了为什么所有的javascript对象都具有Object的基本方法。
+		
+		
 - 借用构造函数
 - 组合继承
 - 原型式继承
