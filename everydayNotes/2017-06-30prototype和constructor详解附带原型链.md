@@ -42,7 +42,7 @@
                 ，而Object的原型对象用Object._proto_ = null表示原型链的最顶端，
                 如此变形成了javascript的原型链继承，同时也解释了为什么所有的javascript对象都具有Object的基本方法。
 
--new分为三步
+- new分为三步
 
                 var one=new Person('js');
                 var one={};  
