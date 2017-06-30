@@ -20,3 +20,11 @@
                 //prototype属性又指向了一个prototype对象，注意prototype属性与prototype对象是两个不同的东西，要注意区别。
                 在prototype对象中又有一个constructor属性，这个constructor属性同样指向一个constructor对象，
                 而这个constructor对象恰恰就是这个function函数本身。
+
+-new分为三步
+
+                var one=new Person('js');
+                var one={};  
+                Person.call(one,'js');
+                
+-
