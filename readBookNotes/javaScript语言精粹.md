@@ -2,7 +2,7 @@
 
 - 避免用　/* */注释  使用//注释
 
-- 字符串第一个字母变成大写 i[0].toUpperCase()+i.substring(1);
+- 字符串第一个字母变成大写 i[0].toUpperCase()+i.substring(1);//+i.silce(1)怕是会更好喔！
 
 - arguments并非一个真正的数组,不具备数组的方法
 
