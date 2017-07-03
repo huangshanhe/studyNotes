@@ -1,6 +1,6 @@
 # hasOwnProperty与isPrototypeOf的区别 #
 
-- 利用hasOwnProperty判断是否有自己的属性或对象(不是继承来的)
+- 利用hasOwnProperty判断是否有自己的属性或对象(继承来的返回false)
 
                 var o =new Object();
                 o.prop="exists";
