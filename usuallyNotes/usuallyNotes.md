@@ -33,7 +33,7 @@
 
 		retrun true； 返回正确的处理结果。
 
-		return false；分会错误的处理结果，终止处理。
+		return false；返回错误的处理结果，终止处理。
 
 		return；把控制权返回给页面。
 
