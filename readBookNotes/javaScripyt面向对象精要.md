@@ -69,56 +69,56 @@
 
  - 配置对象属性是否可以配置  
  
-                    Object.defineProperty(person1,"name"{
-                              enumerable：true,//是否可枚举
-                              configurable：true,//是否可配置
-                              value："Nicholas",//值
-                              writable：true//是否可写
-                      });
- 
-                    var person1 = {
-                       name："Nicholas"
-                    };
-                    Object.defineProperty(person1, "name", {//对象，属性名，描述 
-                        enumerable：false  //不可被枚举
-                    });
-                    console.log("name" in person1);  // true
-                    console.log(person1.propertyIsEnumerable("name"));     // false
-                    var properties = Object.keys(person1);
-                    console.log(properties.length);   // 0
-                    Object.defineProperty(person1, "name", {
-                        configurable：false//不可被配置编辑
-                    });
-                    
-                    // try to delete the Property
-                    delete person1.name;
-                    console.log("name" in person1); // true
-                    console.log(person1.name);  // "Nicholas"
-                    Object.defineProperty(person1, "name", {  // error！！！报错
-                        configurable：true
-                    });
-                    
-                    本例如通常一样定义了name属性，然后设置它的[[Enumerable]]特征为false。
-                    基于这个新值的propertyIsEnumerable()方法将返回false。之后name被改为不可配置。
-                    从现在起，由于该属性不能被改变，试图删除name将会失败，所以name依然存在于person1中。
-                    对name再次调用Object.defineProperty()也不会改变属性。person1对象的属性name被有效地锁定。
-                    最后几行代码试图重新定义name为可配置的。然而这将抛出错误。你无法将一个不可配置的属性变成可配置。
-                    
-   -  
-                              
-                    var person1 = {};
-                    Object.defineProperty(person1, "name", {
-                              value："Nicholas",
-                              enumerable：true,
-                              configurable：true,
-                              writable：true
-                    });       
-                       本例如通常一样定义了name属性，然后设置它的[[Enumerable]]特征为false。
-                       基于这个新值的propertyIsEnumerable()方法将返回false。之后name被改为不可配置。
-                       从现在起，由于该属性不能被改变，试图删除name将会失败，所以name依然存在于person1中。
-                       对name再次调用Object.defineProperty()也不会改变属性。person1对象的属性name被有效地锁定。
-                       最后几行代码试图重新定义name为可配置的。然而这将抛出错误。你无法将一个不可配置的属性变成可配置。
-                       
-                       当你用Object.defineProperty()定义新的属性时一定记得为所有的特征指定一个值，否则布尔型的特征会被默认设置为false。
-                       
+                              Object.defineProperty(person1,"name"{
+                                        enumerable：true,//是否可枚举
+                                        configurable：true,//是否可配置
+                                        value："Nicholas",//值
+                                        writable：true//是否可写
+                                });
+
+                              var person1 = {
+                                 name："Nicholas"
+                              };
+                              Object.defineProperty(person1, "name", {//对象，属性名，描述 
+                                  enumerable：false  //不可被枚举
+                              });
+                              console.log("name" in person1);  // true
+                              console.log(person1.propertyIsEnumerable("name"));     // false
+                              var properties = Object.keys(person1);
+                              console.log(properties.length);   // 0
+                              Object.defineProperty(person1, "name", {
+                                  configurable：false//不可被配置编辑
+                              });
+
+                              // try to delete the Property
+                              delete person1.name;
+                              console.log("name" in person1); // true
+                              console.log(person1.name);  // "Nicholas"
+                              Object.defineProperty(person1, "name", {  // error！！！报错
+                                  configurable：true
+                              });
+
+                              本例如通常一样定义了name属性，然后设置它的[[Enumerable]]特征为false。
+                              基于这个新值的propertyIsEnumerable()方法将返回false。之后name被改为不可配置。
+                              从现在起，由于该属性不能被改变，试图删除name将会失败，所以name依然存在于person1中。
+                              对name再次调用Object.defineProperty()也不会改变属性。person1对象的属性name被有效地锁定。
+                              最后几行代码试图重新定义name为可配置的。然而这将抛出错误。你无法将一个不可配置的属性变成可配置。
+
+                              var person1 = {};
+                              Object.defineProperty(person1, "name", {
+                                        value："Nicholas",
+                                        enumerable：true,
+                                        configurable：true,
+                                        writable：true
+                              });
+
+                                 本例如通常一样定义了name属性，然后设置它的[[Enumerable]]特征为false。
+                                 基于这个新值的propertyIsEnumerable()方法将返回false。之后name被改为不可配置。
+                                 从现在起，由于该属性不能被改变，试图删除name将会失败，所以name依然存在于person1中。
+                                 对name再次调用Object.defineProperty()也不会改变属性。person1对象的属性name被有效地锁定。
+                                 最后几行代码试图重新定义name为可配置的。然而这将抛出错误。你无法将一个不可配置的属性变成可配置。
+
+                                 当你用Object.defineProperty()定义新的属性时一定记得为
+                                 所有的特征指定一个值，否则布尔型的特征会被默认设置为false。
+
 - 
