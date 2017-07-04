@@ -96,7 +96,7 @@
 - ajax
 
 		var data = {  }
-		async: false,//关闭异步，防止数据还没拿到下面就开始用报错
+		async: false,//关闭异步，防止数据还没拿到下面就开始用报错，不推荐，会导致主线程阻塞卡死！
 		$http.post('/people/deleteBatch',data,postCfg)
              .success(function(resp){
            })
