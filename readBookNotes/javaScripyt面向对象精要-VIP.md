@@ -121,4 +121,42 @@
                                  当你用Object.defineProperty()定义新的属性时一定记得为
                                  所有的特征指定一个值，否则布尔型的特征会被默认设置为false。
 
-- 
+- 定义多重属性用Object.defineProperties()而不是Object.defineProperty()。
+
+                              var person1 = {};
+                              Object.defineProperties(person1, {
+                              // data property to store data
+                              _name：{
+                              value："Nicholas",
+                              enumerable：true,
+                              configurable：true,
+                              writable：true
+                              },
+                              // accessor property
+                              name：{
+                              get：function() {
+                              console.log("Reading name");
+                              return this._name;
+                              },
+                              set：function(value) {
+                              console.log("Setting name to ％s", value);
+                              this._name= value;
+                              },
+                              enumerable：true,
+                              configurable：true
+                              }
+                              });
+
+- 获取属性特征 Object.getOwnPropertyDescriptor(对象, "属性名");
+
+                    var descriptor = Object.getOwnPropertyDescriptor(person1, "name");
+                    console.log(descriptor.enumerable);             // true
+                    console.log(descriptor.configurable);           // true
+                    console.log(descriptor.writable);         // true
+                    console.log(descriptor.value);             // "Nicholas"
+                    
+- 禁止修改对象
+
+                    1.禁止扩展(不能新增)：Object.preventExtensions(对象)来禁止扩展    Object.isExtensible(对象)来判断是否是禁止扩展的
+                    2.对象封印(不能新增和配置，只能读写)：Object.seal(person1)来封印   Object.isSealed(对象)来判断是否封印
+                    3.对象冻结(在封印的基础上写都不能写，只能读了)：Object.freeze(对象)来冻结 Object.isFrozen(对象)来判断是否冻结
