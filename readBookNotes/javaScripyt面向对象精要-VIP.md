@@ -60,7 +60,7 @@
  
  - 其实给对象添加属性的时候调用了内部的[[put]]（会在对象的一个新节点上来保存属性）,修改的时候调用内部的[[set]]
  
- - 属性探测用 in 比如 if(obj.age){}; 如果是判断是否存在，而obj.age=0;这时候就不对了，可以用 if('age' in obj){};
+ - 属性探测用 in 比如 if(obj.age){}; 如果是判断是否存在，而obj.age=0;这时候就不对了，可以用 if('age' in obj){};in 对原型属性一返回true
  
  - 彻底删除对象的属性 delete obj.name;
 
@@ -160,3 +160,61 @@
                     1.禁止扩展(不能新增)：Object.preventExtensions(对象)来禁止扩展    Object.isExtensible(对象)来判断是否是禁止扩展的
                     2.对象封印(不能新增和配置，只能读写)：Object.seal(person1)来封印   Object.isSealed(对象)来判断是否封印
                     3.对象冻结(在封印的基础上写都不能写，只能读了)：Object.freeze(对象)来冻结 Object.isFrozen(对象)来判断是否冻结
+
+## 构造函数和原型对象 ##
+
+- 操作符in对原型属性和自有属性都返回true
+
+鉴别一个原型属性,你可以用这样一个函数去鉴别一个属性是否是原型属性。
+
+                    function hasPrototypeProperty(object, name) {
+                    return name in object &&！object.hasOwnProperty(name);
+                    }
+                    console.log(hasPrototypeProperty(book, "title"));  // false
+                    console.log(hasPrototypeProperty(book, "hasOwnProperty"));    // true
+                    
+                    如果某个属性in一个对象，但hasOwnProperty()返回false，那么这个属性就是一个原型属性。
+                    
+- prototype属性 你可以调用对象的Object.getPrototypeOf()方法读取[[Prototype]]属性的值。
+
+                    一个对象实例通过内部属性[[Prototype]]跟踪其原型对象。
+                    该属性是一个指向该实例使用的原型对象的指针。
+          
+                    可以随时改变原型对象的能力在封印对象和冻结对象上有一个十分有趣的后果。
+                    当你在一个对象上使用Object.seal()或Object.freeze()时，完全是在操作对象的自有属性。
+                    你无法添加自有属性或改变冻结对象的自有属性，但仍然可以通过在原型对象上添加属性来扩展这些对象实例，如下例。
+
+                    var person1 = new Person("Nicholas");
+                    var person2 = new Person("Greg");
+                    Object.freeze(person1);
+                    Person.prototype.sayHi= function() {
+                    console.log("Hi");
+                    };
+                    person1.sayHi();                     // outputs "Hi"
+                    person2.sayHi();                     // outputs "Hi"
+                    
+## 继承 ##
+
+- 继承自Object.prototype的方法
+
+                    hasOwnProperty()           检查是否存在一个给定名字的自有属性
+                    propertyIsEnumerable()    检查一个自有属性是否可枚举
+                    isPrototypeOf()            检查一个对象是否是另一个对象的原型对象
+                    valueOf()                返回一个对象的值表达
+                    toString()                返回一个对象的字符串表达
+                    这5种方法经由继承出现在所有对象中。当需要让对象在JavaScript中以一致的方式工作时，
+                    最后两个尤其重要，有时你甚至会想要自己定义它们。
+                    
+ - for-in的时候最好用 hasOwnProperty
+ 
+                    Douglas Crockford推荐在for-in循环中始终使用hasOwnProperty()，如下。
+                    var empty = {};
+                    for(var property in empty) {
+                    if (empty.hasOwnProperty(property)) {
+                              console.log(property);
+                              }
+                    }
+                  
+ - 寄生组合式继承//详情见javaScript高级程序设计
+ 
+ ## 对象模式 ##
