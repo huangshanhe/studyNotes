@@ -218,3 +218,25 @@
  - 寄生组合式继承//详情见javaScript高级程序设计
  
  ## 对象模式 ##
+
+- 模块模式-模块模式是一种用于创建拥有私有数据的单件对象的模式。基本做法是使用立调函数表达（IIFE）来返回一个对象。
+- 构造函数  混入 等
+
+                    function mixin(receiver, supplier) {
+                              for(var property in supplier) {
+                              if(supplier.hasOwnProperty(property)) {
+                                        receiver[property] = supplier[property]
+                                        }
+                              }
+                              return receiver;
+                    }
+                    
+- 作用域安全的构造函数
+
+                    function Person(name) {
+                              if(this instanceof Person) {
+                                        this.name = name;
+                              } else {
+                                        return new Person(name);
+                              }
+                    }
