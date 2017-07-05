@@ -262,6 +262,3 @@
 		2. 为创建的副本添加constructor属性，弥补因重写原型而失去的默认的constructor属性
 		3. 将新创建的对象（即副本）赋值给子类型的原型这种方法只调用了一次SuperType构造函数，
 		instanceof 和isPrototypeOf()也能正常使用。
-
-# **函数表达式** #
- 
