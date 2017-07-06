@@ -1,4 +1,4 @@
-# CSS3属性transform详解之（旋转:rotate,缩放:scale,倾斜:skew,移动:translate）# 
+# CSS3属性transform详解之（旋转:rotate,缩放:scale,倾斜:skew,移动:translat额) # 
 
  
 - 在CSS3中，可以利用transform功能来实现文字或图像的旋转、缩放、倾斜、移动这四种类型的变形处理，本文将对此做详细介绍。
