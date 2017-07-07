@@ -28,4 +28,24 @@
 
 ## 作用域与闭包 ##
 
-- 50
+- IIFE 立即调用  可以是 var fn = function(){}(); 或者 (function fn(){})();
+- 还有一种要在下面调用
+  
+                var foo = (function fn(){
+                     function a(){console.log('a')};
+                     function b(){console.log('b')};
+
+                     return {
+                         a:a,
+                         b:b
+                     };     
+                })();
+
+                foo.a();//a
+                foo.b();//b
+  
+  - 箭头函数 或者用.bind(this)
+  
+  ## this与对象原型对 ##
+  
+  - 
