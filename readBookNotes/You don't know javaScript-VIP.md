@@ -44,8 +44,8 @@
                 foo.a();//a
                 foo.b();//b
   
-  - 箭头函数 或者用.bind(this)
+- 箭头函数或者用.bind(this)
   
-  ## this与对象原型对 ##
+## this与对象原型对 ##
   
-  - 
+- 1
