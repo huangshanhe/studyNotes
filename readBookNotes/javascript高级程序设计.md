@@ -16,7 +16,7 @@
 		 </body>
 		</html> 
 
-1. **声明**
+1. **+声明+**
 
 		   var message; //message为undefine
 		   var message = "hi";
