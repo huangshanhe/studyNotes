@@ -92,7 +92,7 @@
 - e
 - f
 
-##代码片段
+## 代码片段 ##
 - ajax
 
 		var data = {  }
@@ -140,6 +140,7 @@
  `onclick=\"test(&quot;"+files[i].name+"&quot;)\"`
 
 ## 循环 ##
+
 ### $.each( object||array, callback ) ###
 
 
