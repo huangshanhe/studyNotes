@@ -1,0 +1,10 @@
+# 日期控件 #
+
+- 设置当前时间:看API,日期格式要转换 var date = new Date(res.data);
+
+            if (!res.hasError&&res.data) {
+                var date = new Date(res.data);
+                $('.J_Date').datetimepicker('setDate',date);
+            }else {
+               $GM.alert(res.message);
+            }
