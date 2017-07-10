@@ -1,4 +1,4 @@
-# 日期控件 #
+# 日期控件a #
 
 - 设置当前时间:看API,日期格式要转换 var date = new Date(res.data);
 
