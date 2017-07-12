@@ -1,4 +1,4 @@
-# You don't know javaScript #
+# You don't know javaScript-VIP #
 
 ## js入门与进阶 ##
 
