@@ -117,15 +117,15 @@
  		
 		<div id="div1" style="width:100;">
 	
-		        <div id="div2" style="width:33%;dispaly:inline-block;">
+		        <div id="div2" style="width:33%;display:inline-block;">
 				内容
 				</div>
 		
-				<div id="div3" style="width:33%;dispaly:inline-block;">
+				<div id="div3" style="width:33%;display:inline-block;">
 				内容
 				</div>
 		
-				<div id="div4" style="width:33%;dispaly:inline-block;">
+				<div id="div4" style="width:33%;display:inline-block;">
 				内容
 				</div>
 
