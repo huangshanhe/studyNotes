@@ -40,7 +40,7 @@
 ## sublime快速整理代码(缩进) ##
 	{ "keys": ["ctrl+q"], "command": "reindent" }
 
-## javascript学习笔记 ##
+## javascript学习笔记a ##
 
 - switch 语句会使用恒等计算符(===)进行比较:
 
