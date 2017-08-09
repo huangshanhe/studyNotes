@@ -180,3 +180,9 @@
 			{
 				//一些操作代码
 				}
+
+## 英文缩写 ##
+
+- SEO 是由英文Search Engine Optimization  (搜索引擎优化)
+- UED User Experience Design             (用户体验设计)
+- BD 即Business Development              (业务拓展或商务拓展)
