@@ -37,7 +37,7 @@
 
 		return；把控制权返回给页面。
 
-## sublime快速整理代码(缩进) ##
+## sublime快速整理代码(缩进)a ##
 	{ "keys": ["ctrl+q"], "command": "reindent" }
 
 ## javascript学习笔记 ##
