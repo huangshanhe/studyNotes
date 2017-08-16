@@ -14,7 +14,7 @@
 			background: url("a.png") no-repeat left center;
 		}
 
-**获取url里的参数aaa**
+**获取url里的参数**
 
 		var str = location.search.split('='),
 		    projectId = str[1];
