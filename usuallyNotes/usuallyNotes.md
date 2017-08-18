@@ -8,7 +8,7 @@
 
 **直接在chrome控制台的console可以操作**
 
-**背景图样式aaa**
+**背景图样式**
 
 		.bg-pic{
 			background: url("a.png") no-repeat left center;
