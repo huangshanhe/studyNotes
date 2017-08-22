@@ -8,7 +8,9 @@
 
 **直接在chrome控制台的console可以操作**
 
-**背景图样式aaa**
+**选择符 $('.aaa.bbb')表示并且 $('.aaa .bbb')bbb为aaa子元素===$('.aaa>.bbb')**
+
+**背景图样式**
 
 		.bg-pic{
 			background: url("a.png") no-repeat left center;
