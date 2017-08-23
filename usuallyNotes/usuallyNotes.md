@@ -11,6 +11,7 @@
 - 选择符 $('.aaa.bbb')表示并且(同一个class)    
 - $('.aaa .bbb')bbb为aaa子元素(可以是孙子或者孙孙子)  
 - $('.aaa>.bbb')(bbb为aaa儿子(只能是儿子))
+- $('.aa,.bb,.cc')没有父子关系的class一起选择
 
 **背景图样式aaa**
 
