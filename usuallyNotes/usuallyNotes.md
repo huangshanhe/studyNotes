@@ -151,25 +151,25 @@
 ### $.each( object||array, callback ) ###
 
 
-    $.each([52, 97], function(index, value) {
-	alert(index + ': ' + value);
-    });
+ 	$.each([52, 97], function(index, value) {
+		alert(index + ': ' + value);
+	});
 
 	var arr1 = [ “one”, “two”, “three”, “four”, “five” ];
 	$.each(arr1, function(){
-	alert(this);
+		alert(this);
 	});
 	输出：one   two  three  four   five
 
 	var arr2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 	$.each(arr2, function(i, item){
-	alert(item[0]);
+		alert(item[0]);
 	});
 	输出：1   4   7
 
 	var obj = { one:1, two:2, three:3, four:4, five:5 };
 	$.each(obj, function(key, val) {
-	alert(obj[key]);
+		alert(obj[key]);
 	});
 	输出：1   2  3  4  5
 
