@@ -10,7 +10,7 @@
 
 **选择符 $('.aaa.bbb')表示并且 $('.aaa .bbb')bbb为aaa子元素===$('.aaa>.bbb')**
 
-**背景图样式**
+**背景图样式aaa**
 
 		.bg-pic{
 			background: url("a.png") no-repeat left center;
