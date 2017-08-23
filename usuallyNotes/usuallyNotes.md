@@ -14,14 +14,14 @@
 
 **背景图样式aaa**
 
-		.bg-pic{
-			background: url("a.png") no-repeat left center;
-		}
+	.bg-pic{
+		background: url("a.png") no-repeat left center;
+	}
 
 **获取url里的参数**
 
-		var str = location.search.split('='),
-		    projectId = str[1];
+	var str = location.search.split('='),//search()取'?'后面的内容
+	    projectId = str[1];
 
 **对象合并**
 
