@@ -69,3 +69,6 @@
                   document.write(50);//不执行 
                 }
                 a();//10
+
+- 最后，表单校验的时候Btn要return false阻止表单提交，阻止点击事件<a>href跳转或者冒泡用return false;
+  其他应用场景尽量用return 或者 return smData;
