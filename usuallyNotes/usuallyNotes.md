@@ -13,7 +13,7 @@
 - $('.aaa>.bbb')(bbb为aaa儿子(只能是儿子))
 - $('.aa,.bb,.cc')没有父子关系的class一起选择
 
-**背景图样式aaa**
+**背景图样式**
 
 	.bg-pic{
 		background: url("a.png") no-repeat left center;
