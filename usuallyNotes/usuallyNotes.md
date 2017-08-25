@@ -6,7 +6,7 @@
 
 **新建文件窗口:ctrl+n**
 
-** 原生js性能好,jquery是库不是框架，vue、react、angularjs、bootstrap是框架，框架要按规则来 **
+**原生js性能好,jquery是库不是框架，vue、react、angularjs、bootstrap是框架，框架要按规则来**
 
 **如果一个方法定义了但是报错undefine，可能和vue冲突，或者和框架冲突，尝试换个位置，放在vue外面或者框架外面**
 
