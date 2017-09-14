@@ -19,6 +19,11 @@
 - $('.aaa>.bbb')(bbb为aaa儿子(只能是儿子))
 - $('.aa,.bb,.cc')没有父子关系的class一起选择
 
+** 关于idea的快捷键和clean **
+
+- clean war包的话 Build Build Artifacts 更新maven包和gradle
+- clean 项目 File Invalidate Caches
+ 
 **背景图样式**
 
 	.bg-pic{
