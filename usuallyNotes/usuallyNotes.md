@@ -1,6 +1,6 @@
 # 经常容易忘记的知识点以及快捷键 #
 
-## 快捷键666666 ##
+## 快捷键66666 ##
 
 * [解构不定参数](http://www.infoq.com/cn/articles/es6-in-depth-destructuring/ "解构不定参数")
 
