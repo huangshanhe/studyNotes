@@ -6,7 +6,7 @@
 
 **新建文件窗口:ctrl+n**
 
-** 鼠标移上去变手：cursor:pointer; **
+**鼠标移上去变手：cursor:pointer;**
 
 **原生js性能好,jquery是库不是框架，vue、react、angularjs、bootstrap是框架，框架要按规则来**
 
