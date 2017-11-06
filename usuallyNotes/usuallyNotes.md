@@ -1,10 +1,10 @@
 # 经常容易忘记的知识点以及快捷键 #
 
-## 快捷键6 ##
+## 快捷键 ##
 
 * [解构不定参数](http://www.infoq.com/cn/articles/es6-in-depth-destructuring/ "解构不定参数")
 
-**新建文件窗口:ctrl+n**
+**新建文件窗口:ctrl+n  vscode整行复制: ctrl+alt+方向键**
 
 **鼠标移上去变手：cursor:pointer;**
 
