@@ -10,6 +10,15 @@
 
 **原生js性能好,jquery是库不是框架，vue、react、angularjs、bootstrap是框架，框架要按规则来**
 
+** setTimeout(test,600)或者  如下  如果是方法，不要加()会失效，()加习惯了好坑**
+
+				setTimeout(function time(){
+					self.priceLazy = true;
+					self.$nextTick(() => {
+					    $('.price').addClass('price-animated');
+					})
+				 },480);
+
 **如果一个方法定义了但是报错undefine，可能和vue冲突，或者和框架冲突，尝试换个位置，放在vue外面或者框架外面**
 
 **直接在chrome控制台的console可以操作**
