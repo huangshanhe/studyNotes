@@ -6,7 +6,7 @@
 
 **新建文件窗口:ctrl+n  vscode整行复制: shift+alt+方向键**
 
-**鼠标移上去变手：cursor:pointer;6666**
+**鼠标移上去变手：cursor:pointer;666**
 
 **原生js性能好,jquery是库不是框架，vue、react、angularjs、bootstrap是框架，框架要按规则来**
 
