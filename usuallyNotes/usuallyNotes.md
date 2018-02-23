@@ -6,7 +6,7 @@
 
 **新建文件窗口:ctrl+n  vscode整行复制: shift+alt+方向键**
 
-**鼠标移上去变手：cursor:pointer;666**
+**鼠标移上去变手：cursor:pointer;66**
 
 **原生js性能好,jquery是库不是框架，vue、react、angularjs、bootstrap是框架，框架要按规则来**
 
@@ -15,8 +15,8 @@
 ** setTimeout(test,600)或者  如下  如果是方法，不要加()会失效，()加习惯了好坑**
 
 				setTimeout(function time(){
-					self.priceLazy = true;
-					self.$nextTick(() => {
+					this.priceLazy = true;
+					this.$nextTick(() => {
 					    $('.price').addClass('price-animated');
 					})
 				 },480);
