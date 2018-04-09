@@ -15,3 +15,6 @@
 动端的 iOS 世界和 Android 世界。不同世界的浏览器王国的命运不一样，例如，在 OS X 世界中，IE
 王国是不存在的，而 Safari 王国却异常强大，但在 Windows 世界中，Safari 王国却异常落寞。
 以上这一切就构成了完整的 CSS 世界的“世界观”。
+
+- 超越!important 超越最大
+- min-width > max-width > !important
