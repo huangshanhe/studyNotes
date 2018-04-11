@@ -4,7 +4,7 @@
         Flux在此就不涉及了，Flux本身是一套单项数据流的设计框架，redux是其的一种具体实现罢了。
         redux和react总一起出现是因为如果单单使用react，它仅仅是个view framework，不足以提供足够的前端管理和使用功能。
         而redux的引入就好像react+ MC(model controller) 一样，赋予了react完整的生态系统。当然redux不是基于MVC的。
-        简单说，redux + react换了个更直观的法子实现了MVC能提供的数据管理功能。要理解下图，最核心要理解几点：
+        简单说，redux + react换了个更直观的法子实现了MVC能提供的数据管理功能。最核心要理解几点：
 
         1. React本身是基于component的View
         2. Redux是flux的一个实现，其核心有一个中心store用于管理全局state以及处理操作
