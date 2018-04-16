@@ -26,8 +26,11 @@
             },
             a: function(){
                 $(document).on('click', '.J_SubmitBtn', function() {
-                //点击事件公共适用型
+                    //点击事件公共适用型
                 });
+                $('.J_SubmitBtn').on('click', function() {
+                    //点击事件公共适用型
+                })
             },
             b: function(){
                 //b方法
@@ -51,7 +54,6 @@
                 flag: true
             },
             methods: {
-
                 commonClick: function(event){
                     var _this = $(event.target).firstChild(),
                         depth = _this.data('id');
