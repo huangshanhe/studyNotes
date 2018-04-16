@@ -4,9 +4,7 @@
 
 * [解构不定参数](http://www.infoq.com/cn/articles/es6-in-depth-destructuring/ "解构不定参数")
 
-**新建文件窗口:ctrl+n  vscode整行复制: shift+alt+方向键**
-
-**鼠标移上去变手：cursor:pointer;6**
+**新建文件窗口:ctrl+n666**
 
 **原生js性能好,jquery是库不是框架，vue、react、angularjs、bootstrap是框架，框架要按规则来**
 
@@ -14,16 +12,12 @@
 
 ** setTimeout(test,600)或者  如下  如果是方法，不要加()会失效，()加习惯了好坑**
 
-				setTimeout(function time(){
-					this.priceLazy = true;
-					this.$nextTick(() => {
-					    $('.price').addClass('price-animated');
-					})
-				 },480);
-
-**如果一个方法定义了但是报错undefine，可能和vue冲突，或者和框架冲突，尝试换个位置，放在vue外面或者框架外面**
-
-**直接在chrome控制台的console可以操作**
+	setTimeout(function time(){
+		this.priceLazy = true;
+		this.$nextTick(() => {
+		    $('.price').addClass('price-animated');
+		})
+	 },480);
 
 - 选择符 $('.aaa.bbb')表示并且(同一个class)    
 - $('.aaa .bbb')bbb为aaa子元素(可以是孙子或者孙孙子)  
@@ -82,7 +76,7 @@
 		elem = document.getElementById("demo"); // 查找元素 
 		elem.innerHTML = x;                     // 在元素中显示 x		
 		var x; // 声明 x
-		resule: 5
+		result: 5
 	
 - 但是JavaScript 只有声明的变量会提升，初始化的不会。
 
@@ -133,12 +127,12 @@
 
 			mui.ajax(base+'/personaldayYield/findPeopleReportStates', {//mui的ajax
 				data: {
-				'checkDate':data,
-			       'personaldayYield.project.id':projectId
+				  'checkDate':data,
+			          'personaldayYield.project.id':projectId
 				},
 				dataType: 'json',
 				type: 'POST',
-				async: false,//这句是关键,刚接触前端的时候被坑过
+				async: false,//这句是关键,刚接触前端的时候被坑过不建议用,会阻塞进程
 				timeout: 5000,
 				success: function(data) {  
 			 }
@@ -171,7 +165,7 @@
 
 ## 循环 ##
 
-### $.each( object||array, call
+### $.each(object||array, call)
 
 - inherit是继承父类的属性，一般用于字体、颜色、背景等
 - auto是按情况自适应，一般用于高度、宽度、外边距和内边距等关于长度的属性
