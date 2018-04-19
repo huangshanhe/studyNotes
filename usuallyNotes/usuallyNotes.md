@@ -4,7 +4,7 @@
 
 * [解构不定参数](http://www.infoq.com/cn/articles/es6-in-depth-destructuring/ "解构不定参数")
 
-**新建文件窗口:ctrl+n666**
+**新建文件窗口:ctrl+n66**
 
 **原生js性能好,jquery是库不是框架，vue、react、angularjs、bootstrap是框架，框架要按规则来**
 
