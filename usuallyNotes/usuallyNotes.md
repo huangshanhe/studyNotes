@@ -6,6 +6,13 @@
 
 **新建文件窗口:ctrl+n666**
 
+- 刷新跳转返回页面顶部
+
+	window.onbeforeunload = function(){
+	    document.documentElement.scrollTop = 0;  //ie下
+	    document.body.scrollTop = 0;  //非ie
+	};
+
 **原生js性能好,jquery是库不是框架，vue、react、angularjs、bootstrap是框架，框架要按规则来**
 
 **div内的两个并排div顶对齐有时候会被内容干扰不对齐,vertical-align: top 即可**
