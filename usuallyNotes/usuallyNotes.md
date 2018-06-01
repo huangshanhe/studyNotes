@@ -46,12 +46,39 @@
 
 	var str = location.search.split('='),//search()取'?'后面的内容
 	    projectId = str[1];
+	var param = location.pathname.split('/').pop() //路由 /help/addad2131?aaa=121  取出addad2131
 
 **对象合并**
 
 	var dataObjec={},ruleDatas={},values={},options={};//初始化
 	values[字段名]=data.value;//赋值
-	var postDate = $.extend({},dataObject,ruleDatas,values,options)//合并对象
+	var postDate = $.extend(dataObject,ruleDatas,values,options)//合并对象
+	
+	var object1 = {
+	    apple: 0,
+	    banana: {
+	        weight: 52,
+	        price: 100
+	    },
+	    cherry: 97
+	};
+		
+	var object2 = {
+	    banana: {
+		price: 200
+	    },
+	    durian: 100
+	};
+
+	//默认情况浅拷贝
+	//object1--->{"apple":0,"banana":{"price":200},"cherry":97,"durian":100}
+	//object2的banner覆盖了object1的banner，但是weight属性未被继承
+	//$.extend(object1, object2);
+
+	//深拷贝
+	//object1--->{"apple":0,"banana":{"weight":52,"price":200},"cherry":97,"durian":100}
+	//object2的banner覆盖了object1的banner，但是weight属性也被继承了呦
+	$.extend(true,object1, object2);
 
 **attr()和addClass()区别：attr('class','')直接全部覆盖，而addClass()在原来基础上追加class,removeClass('a b c')空格隔开**
 
@@ -107,7 +134,7 @@
 		function myFunction(y) {
 		    return y * y;
 		}
-		resule: 25
+		resute: 25
 		
 - Arguments 对象JavaScript 函数有个内置的对象 arguments 对象。argument 对象包含了函数调用的参数数组。通过这种方式你可以很方便的找到最大的一个参数的值：实例
 
