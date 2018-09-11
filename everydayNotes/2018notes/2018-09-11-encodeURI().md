@@ -4,7 +4,7 @@
 - JavaScript中有三个可以对字符串编码的函数，分别是： escape,encodeURI,encodeURIComponent，
 - 相应3个解码函数：unescape,decodeURI,decodeURIComponent 。
 
-### 下面简单介绍一下它们的区别 ###
+### 下面简单介绍一112下它们的区别 ###
 
 ## 1 escape()函数 ##
 
