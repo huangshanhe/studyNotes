@@ -47,4 +47,9 @@
 
 ## 读书笔记 ##
 
+- 数组 栈 队列
+
 - 数组 foreach let aaa = [1, 2, 3, 4, 5] aaa.forEach((item,index) => { if(index === 3){alert(item)} })  // 4
+- 栈（LIFO last in first out） 类似于数组，但是数组可以再任意位置插入和删除，然而栈只能在顶部做这些操作，后入先出规则
+- 队列(FIFO first in first out) Queue 有优先队列（机场登机、急症室）、循环队列（击鼓传花）
+- 
