@@ -46,3 +46,5 @@
 有时我们可以用空间来换取时间以达到目的。
 
 ## 读书笔记 ##
+
+- 数组 foreach let aaa = [1, 2, 3, 4, 5] aaa.forEach((item,index) => { if(index === 3){alert(item)} })  // 4
