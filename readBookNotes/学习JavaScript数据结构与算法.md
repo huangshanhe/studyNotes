@@ -53,7 +53,8 @@
 - 栈（LIFO last in first out） 类似于数组，但是数组可以再任意位置插入和删除，然而栈只能在顶部做这些操作，后入先出规则
 - 队列(FIFO first in first out) Queue 有优先队列（机场登机、急症室）、循环队列（击鼓传花）
 - 链表 双向链表 循环链表 （扇子舞 火车）
-- 集合（无序且唯一） let ccc = { 1:1, 2:2, 3:3, 4:4, 5:5 }  
-Object.keys(ccc) 返回[1, 2, 3, 4, 5] 
+- 集合（无序且唯一）交集 差集 子集 let ccc = { a:1, b:2, c:3, d:4, e:5 }  
+Object.keys(ccc) 返回[a, b, c, d, e] Object.vakues(ccc) 返回 [1, 2, 3, 4, 5]
 for(let i in ccc){console.log(ccc.hasOwnProperty(i))} 返回 5*true
+- 字典和散列表
 - 
