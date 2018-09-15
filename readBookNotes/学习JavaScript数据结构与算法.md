@@ -1,6 +1,6 @@
 # 学习JavaScript数据结构与算法 #
 
-## 首先了解下算法的基础知识 ##
+## 首先了解下算法的基础知识 ACM (Association for Computing Machinery ) 中文:国际计算机学会 ##
 
 - 1.什么是算法，关于时间复杂度和空间复杂度的解释
 
@@ -56,5 +56,5 @@
 - 集合（无序且唯一）交集 差集 子集 let ccc = { a:1, b:2, c:3, d:4, e:5 }  
 Object.keys(ccc) 返回[a, b, c, d, e] Object.vakues(ccc) 返回 [1, 2, 3, 4, 5]
 for(let i in ccc){console.log(ccc.hasOwnProperty(i))} 返回 5*true
-- 字典和散列表
-- 
+- 字典和散列表 和集合一样有唯一性 但是有键值对 集合只有值 散列表不能移除 只能赋值undefine
+- 树啊
