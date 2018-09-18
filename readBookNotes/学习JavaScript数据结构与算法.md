@@ -57,4 +57,4 @@
 Object.keys(ccc) 返回[a, b, c, d, e] Object.vakues(ccc) 返回 [1, 2, 3, 4, 5]
 for(let i in ccc){console.log(ccc.hasOwnProperty(i))} 返回 5*true
 - 字典和散列表 和集合一样有唯一性 但是有键值对 集合只有值 散列表不能移除 只能赋值undefine
-- 树
+- 树啊
