@@ -57,4 +57,31 @@
 Object.keys(ccc) 返回[a, b, c, d, e] Object.vakues(ccc) 返回 [1, 2, 3, 4, 5]
 for(let i in ccc){console.log(ccc.hasOwnProperty(i))} 返回 5*true
 - 字典和散列表 和集合一样有唯一性 但是有键值对 集合只有值 散列表不能移除 只能赋值undefine
-- 树1
+- 树
+- 矩阵
+- 算法
+1. 冒泡排序 不推荐 时间复杂度 n2                      
+2. 选择排序也不推荐 也是 n2
+3. 插入排序
+4. 归并排序
+5. 快速排序
+
+- 搜索
+1.顺序搜搜 低效
+2.二分搜搜 类似猜数字游戏 取中间值，比较好 先快排再搜
+
+- 递归 递归函数需要一个边界条件防止无限递归
+二分搜搜
+
+贪心算法
+大O算法
+动态规划 分解成相互依赖的子问题
+分而治之 分解成相互独立的子问题
+随机森林算法
+
+                                在机器学习中，随机森林是一个包含多个决策树的分类器， 并且其输出的类别是由个别树输出的类别的众数而定。
+                                Leo Breiman和Adele Cutler发展出推论出随机森林的算法。 而 "Random Forests" 是他们的商标。 
+                                这个术语是1995年由贝尔实验室的Tin Kam Ho所提出的随机决策森林（random decision forests）而来的。
+                                这个方法则是结合 Breimans 的 "Bootstrap aggregating" 想法和 Ho 的"random subspace method"以建造决策树的集合。
+
+
