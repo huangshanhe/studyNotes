@@ -26,7 +26,7 @@
  
 		用typeof 判断类型
 
-1. **构造函数 constructor hasOwnPropety**
+1. **构造函数 constructor hasOwnProperty**
 
 1. **条件操作符**
 
