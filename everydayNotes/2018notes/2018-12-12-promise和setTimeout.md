@@ -88,3 +88,28 @@
 
           //执行结果： 1主线程、7微任务、6微任务、8微任务、2宏任务、4微任务、3宏任务里面的微任务、5微任务、
           //          9宏任务、11微任务、10宏任务里面的微任务、12微任务
+
+
+        setTimeout(function(){console.log(1)},0);
+        
+        new Promise(function(resolve,reject){
+           console.log(2);
+           setTimeout(function(){resolve()},0)
+        }).then(function(){console.log(3)
+        }).then(function(){console.log(4)});
+
+        process.nextTick(function(){console.log(5)});
+
+        console.log(6);
+
+        //输出的是  2 6 5 1 3 4
+
+        setTimeout(function () {
+          console.log(3);
+        }, 0);
+
+        Promise.resolve().then(function () {
+          console.log(2);
+        });
+        console.log(1);
+        //输出为  1  2 3
