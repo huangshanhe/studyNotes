@@ -196,7 +196,7 @@ let命令、const命令、class命令声明的全局变量，不属于顶层对�
                 上面代码中，第二种写法要好于第一种写法，理由是第二种写法可以捕获前面then方法执行中的错误，
                 也更接近同步的写法（try/catch）。因此，建议总是使用catch方法，而不使用then方法的第二个参数。
 
-- 模块加载
+- 模块加载 详情见笔记里的import和require
 
                 默认情况下，浏览器是同步加载 JavaScript 脚本，即渲染引擎遇到<script>标签就会停下来，
                 等到执行完脚本，再继续向下渲染。如果是外部脚本，还必须加入脚本下载的时间。
@@ -217,6 +217,89 @@ let命令、const命令、class命令声明的全局变量，不属于顶层对�
                 
                 利用顶层的this等于undefined这个语法点，可以侦测当前代码是否在 ES6 模块之中。
                 const isNotModuleScript = this !== undefined;
+                
+                讨论 Node 加载 ES6 模块之前，必须了解 ES6 模块与 CommonJS 模块完全不同。
+
+                它们有两个重大差异。
+
+                CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。
+                CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。
+                
+                ES6 不缓存 活的
+                CommonJS 缓存 死的，除非用函数返回
+                
+                node加载 只有import命令才可以加载.mjs文件
+                
+                CommonJS 模块的输出都定义在module.exports这个属性上面。
+                Node 的import命令加载 CommonJS 模块，Node 会自动将module.exports属性，
+                当作模块的默认输出，即等同于export default xxx。
+
+                下面是一个 CommonJS 模块。
+
+                // a.js
+                module.exports = {
+                  foo: 'hello',
+                  bar: 'world'
+                };
+
+                // 等同于
+                export default {
+                  foo: 'hello',
+                  bar: 'world'
+                };
+                
+                CommonJS 模块加载 ES6 模块，不能使用require命令，而要使用import()函数。ES6 模块的所有输出接口，会成为输入对象的属性。
+
+- CommonJS 循环加载
+
+                CommonJS 模块加载 ES6 模块，不能使用require命令，而要使用import()函数。ES6 模块的所有输出接口，会成为输入对象的属性。
+                总之，CommonJS 输入的是被输出值的拷贝，不是引用。
+
+                另外，由于 CommonJS 模块遇到循环加载时，返回的是当前已经执行的部分的值，而不是代码全部执行后的值，
+                两者可能会有差异。所以，输入变量的时候，必须非常小心。
+
+                var a = require('a'); // 安全的写法
+                var foo = require('a').foo; // 危险的写法
+
+                exports.good = function (arg) {
+                  return a.foo('good', arg); // 使用的是 a.foo 的最新值
+                };
+
+                exports.bad = function (arg) {
+                  return foo('bad', arg); // 使用的是一个部分加载时的值
+                };
+                上面代码中，如果发生循环加载，require('a').foo的值很可能后面会被改写，改用require('a')会更保险一点。
+
+- es6 循环加载    
+
+                解决这个问题的方法，就是让b.mjs运行的时候，foo已经有定义了。这可以通过将foo写成函数来解决。
+
+                // a.mjs
+                import {bar} from './b';
+                console.log('a.mjs');
+                console.log(bar());
+                function foo() { return 'foo' }
+                export {foo};
+
+                // b.mjs
+                import {foo} from './a';
+                console.log('b.mjs');
+                console.log(foo());
+                function bar() { return 'bar' }
+                export {bar};
+
+                这是因为函数具有提升作用，在执行import {bar} from './b'时，函数foo就已经有定义了，
+                所以b.mjs加载的时候不会报错。这也意味着，如果把函数foo改写成函数表达式，也会报错。
+
+                // a.mjs
+                import {bar} from './b';
+                console.log('a.mjs');
+                console.log(bar());
+                const foo = () => 'foo';
+                export {foo};
+                上面代码的第四行，改成了函数表达式，就不具有提升作用，执行就会报错。
+
+
                 
 # ...(扩展运算符)和assign()以及拷贝 #
 
