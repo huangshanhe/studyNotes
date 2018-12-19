@@ -5,6 +5,12 @@
         co 函数库是著名程序员 TJ Holowaychuk 于2013年6月发布的一个小工具，用于 Generator 函数的自动执行。
         co 函数库其实就是将两种自动执行器（Thunk 函数和 Promise 对象），包装成一个库。
         使用 co 的前提条件是，Generator 函数的 yield 命令后面，只能是 Thunk 函数或 Promise 对象。
+        
+        Thunk函数等价于柯里化：        
+        thunk函数具备以下两个要素： 
+        1. 有且只有一个参数是callback的函数； 
+        2. callback的第一个参数是error。 
+        使用thunk函数，同时结合co我们就可以像写同步代码那样来写书写异步代码
 
 - async和await其实就是Generator的语法糖。
 
