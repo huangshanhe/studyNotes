@@ -52,3 +52,13 @@
           比如我们写一个项目要依赖于jQuery，没有这个包的依赖运行就会报错，这时候就把这个依赖写入dependencies ；
           而我们使用的一些构建工具比如glup、webpack这些只是在开发中使用的包，上线以
           后就和他们没关系了，所以将它写入devDependencies。
+          
+          网上统一的观念是
+
+          devDependencies用于本地环境开发时候。
+          dependencies用户发布环境
+          其实看名字我也知道是这个意思，我觉得没解释情况。 
+          通过NODE_ENV=developement或NODE_ENV=production指定开发还是生产环境。 
+          devDependencies是只会在开发环境下依赖的模块，生产环境不会被打入包内。
+          而dependencies依赖的包不仅开发环境能使用，生产环境也能使用。
+
