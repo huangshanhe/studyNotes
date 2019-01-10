@@ -63,12 +63,21 @@
 
         好了铺垫完这些概念，我们回过头看上面那道题目困惑的那两句关键的地方（建议一边对着题目一边看解析我怕我讲的太快你跟不上啊哈哈😂）。
         执行到 async1 这个函数时，首先会打印出“async1 start”（这个不用多说了吧，async 表达式定义的函数也是立即执行的）；
-        然后执行到 await async2()，发现 async2 也是个 async 定义的函数，所以直接执行了“console.log('async2')”，同时async2返回了一个Promise，划重点：此时返回的Promise会被放入到回调队列中等待，await会让出线程（js是单线程还用我介绍吗），接下来就会跳出 async1函数 继续往下执行。
-        然后执行到 new Promise，前面说过了promise是立即执行的，所以先打印出来“promise1”，然后执行到 resolve 的时候，resolve这个任务就被放到回调队列中（前面都讲过了上课要好好听啊喂）等待，然后跳出Promise继续往下执行，输出“script end”。
+        然后执行到 await async2()，发现 async2 也是个 async 定义的函数，所以直接执行了“console.log('async2')”，
+        同时async2返回了一个Promise，划重点：此时返回的Promise会被放入到回调队列中等待，await会让出线程（js是单线程还用我介绍吗），
+        接下来就会跳出 async1函数 继续往下执行。
+        然后执行到 new Promise，前面说过了promise是立即执行的，所以先打印出来“promise1”，然后执行到 resolve 的时候，
+        resolve这个任务就被放到回调队列中（前面都讲过了上课要好好听啊喂）等待，然后跳出Promise继续往下执行，输出“script end”。
         接下来是重头戏。同步的事件都循环执行完了，调用栈现在已经空出来了，那么事件循环就会去回调队列里面取任务继续放到调用栈里面了。
-        这时候取到的第一个任务，就是前面 async1 放进去的Promise，执行Promise时发现又遇到了他的真命天子resolve函数，划重点：这个resolve又会被放入任务队列继续等待，然后再次跳出 async1函数 继续下一个任务。
-        接下来取到的下一个任务，就是前面 new Promise 放进去的 resolve回调 啦 yohoo～这个resolve被放到调用栈执行，并输出“promise2”，然后继续取下一个任务。
-        后面的事情相信你已经猜到了，没错调用栈再次空出来了，事件循环就取到了下一个任务：历经千辛万苦终于轮到的那个Promise的resolve回调！！！执行它（啥也不会打印的，因为 async2 并没有return东西，所以这个resolve的参数是undefined），此时 await 定义的这个 Promise 已经执行完并且返回了结果，所以可以继续往下执行 async1函数 后面的任务了，那就是“console.log('async1 end')”。
+        这时候取到的第一个任务，就是前面 async1 放进去的Promise，执行Promise时发现又遇到了他的真命天子resolve函数，
+        划重点：这个resolve又会被放入任务队列继续等待，然后再次跳出 async1函数 继续下一个任务。
+        接下来取到的下一个任务，就是前面 new Promise 放进去的 resolve回调 啦 yohoo～这个resolve被放到调用栈执行，
+        并输出“promise2”，然后继续取下一个任务。
+        后面的事情相信你已经猜到了，没错调用栈再次空出来了，事件循环就取到了下一个任务：
+        历经千辛万苦终于轮到的那个Promise的resolve回调！！！执行它（啥也不会打印的，因为 async2 并没有return东西，
+        所以这个resolve的参数是undefined），此时 await 定义的这个 Promise 已经执行完并且返回了结果，
+        所以可以继续往下执行 async1函数 后面的任务了，
+        那就是“console.log('async1 end')”。
         谜之困惑的那两句执行结果（“promise2”、“async1 end”）就是这样来的～
 
         总结
