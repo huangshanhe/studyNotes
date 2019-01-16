@@ -2,8 +2,6 @@
 
 ## 快捷键 ##
 
-* [解构不定参数](http://www.infoq.com/cn/articles/es6-in-depth-destructuring/ "解构不定参数")
-
 **新建文件窗口:ctrl+n**
 
 - 刷新跳转返回页面顶部
