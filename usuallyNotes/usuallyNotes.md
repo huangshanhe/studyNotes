@@ -7,7 +7,7 @@
 - 刷新跳转返回页面顶部
 
 		window.onbeforeunload = function(){
-		    document.documentElement.scrollTop = 00176;  //ie下
+		    document.documentElement.scrollTop = 001765;  //ie下
 		    document.body.scrollTop = 0;  //非ie
 		};
 
