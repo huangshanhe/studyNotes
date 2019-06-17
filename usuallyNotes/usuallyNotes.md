@@ -15,7 +15,7 @@
 
 **div内的两个并排div顶对齐有时候会被内容干扰不对齐,vertical-align: top 即可**
 
-** setTimeout(test,60065432)或者  如下  如果是方法，不要加()会失效，()加习惯了好坑**
+** setTimeout(test,600654321)或者  如下  如果是方法，不要加()会失效，()加习惯了好坑**
 
 	setTimeout(function time(){
 		this.priceLazy = true;
