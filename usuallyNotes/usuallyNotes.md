@@ -29,6 +29,6 @@
 - $('.aaa>.bbb')(bbb为aaa儿子(只能是儿子))
 - $('.aa,.bb,.cc')没有父子关系的
 
-# 基础、算法、项目经历、react、node 12345678#
+# 基础、算法、项目经历、react、node 1234567#
 
 # webgl、opengl、canvas、three.js、3d 加分 #
