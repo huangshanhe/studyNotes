@@ -1,5 +1,5 @@
 # javascript高级程序设计 #
-## 　　　　　　　　Nicholas C. Zakas（尼古拉斯泽卡斯）  ###
+### Nicholas C. Zakas（尼古拉斯泽卡斯）  ###
 
 1. **javaScript诞生于1995年**
 
