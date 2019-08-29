@@ -34,7 +34,8 @@
         let sex = "boy";
         export default sex（sex不能加大括号）
         //原本直接export sex外部是无法识别的，加上default就可以了.但是一个文件内最多只能有一个export default。
-        其实此处相当于为sex变量值"boy"起了一个系统默认的变量名default，自然default只能有一个值，所以一个文件内不能有多个export default。
+        其实此处相当于为sex变量值"boy"起了一个系统默认的变量名default，
+        自然default只能有一个值，所以一个文件内不能有多个export default。
 
         // b.js
         本质上，a.js文件的export default输出一个叫做default的变量，然后系统允许你为它取任意名字。
