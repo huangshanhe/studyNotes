@@ -19,6 +19,7 @@
 
         //b.js
         import { str, log } from 'a'; //也可以分开写两次，导入的时候带花括号
+        或者 important * as utils from 'a' 用的时候 a.str a.log
 
         2.export default
         //a.js
