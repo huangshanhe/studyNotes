@@ -2,33 +2,33 @@
 
 ## js、nodejs 基础 ##
 
-        [闭包]: https://segmentfault.com/a/1190000006875662
-        作用域
-        原型链
-        变量提升
-        函数参数值传递
-        this 指向问题
-        函数提升以及优先级问题
-        new 操作符做了什么？
-        用 ES5 实现一个继承（有哪些方式）
-        0.2+0.1不等于0.3问题（浮点数精度）
-        堆、栈、队列是什么？都有什么区别？有什么应用？
-        深拷贝、浅拷贝问题（immutable是怎么实现的？）
-        typed array 问题
-        es6 箭头函数问题
-        let 会提升吗？声明、初始化、赋值等概念。什么是暂时性死区？
-        什么是 iterator？for of 用过吗？
-        call、apply、bind 区别，bind 怎么实现的？
-        caller、callee 了解吗？什么时候会用到？建议用吗？
-        es6 其他特性用过吗？（Class、Map、Set、Decorator 等分别考察）
-        promise 实现原理（怎么实现取消？怎么实现 promise all、race 等？）
-        async await 知识点（await 的作用，async 返回的是什么）
-        generator 又是什么？
-        v8 线程模型、event loop（async、promise、nextTick、setTimeout、setImmediate 经典问题变着花样考）
-        进程和线程是什么？有什么区别？
-        v8 垃圾回收机制
-        输入 URL，浏览器的执行过程又是怎么样的？（浏览器解析方式、顺序，async、defer等）
-        了解前端模块化吗？有几种规范？（commonjs 和 es module 都是怎么实现的？有啥区别？）
+[闭包]: https://segmentfault.com/a/1190000006875662
+[作用域]: https://juejin.im/post/5afb0ae56fb9a07aa2138425
+原型链
+变量提升
+函数参数值传递
+this 指向问题
+函数提升以及优先级问题
+new 操作符做了什么？
+用 ES5 实现一个继承（有哪些方式）
+0.2+0.1不等于0.3问题（浮点数精度）
+堆、栈、队列是什么？都有什么区别？有什么应用？
+深拷贝、浅拷贝问题（immutable是怎么实现的？）
+typed array 问题
+es6 箭头函数问题
+let 会提升吗？声明、初始化、赋值等概念。什么是暂时性死区？
+什么是 iterator？for of 用过吗？
+call、apply、bind 区别，bind 怎么实现的？
+caller、callee 了解吗？什么时候会用到？建议用吗？
+es6 其他特性用过吗？（Class、Map、Set、Decorator 等分别考察）
+promise 实现原理（怎么实现取消？怎么实现 promise all、race 等？）
+async await 知识点（await 的作用，async 返回的是什么）
+generator 又是什么？
+v8 线程模型、event loop（async、promise、nextTick、setTimeout、setImmediate 经典问题变着花样考）
+进程和线程是什么？有什么区别？
+v8 垃圾回收机制
+输入 URL，浏览器的执行过程又是怎么样的？（浏览器解析方式、顺序，async、defer等）
+了解前端模块化吗？有几种规范？（commonjs 和 es module 都是怎么实现的？有啥区别？）
 
 ## css、html、dom、浏览器相关基础 ##
 
