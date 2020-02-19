@@ -182,7 +182,7 @@
 
 [forceUpdate() 用过吗？是什么干嘛用的？与 setState 有啥区别？]()
 
-[props 和 state]
+[props 和 state]()
 
 [组件设计相关（怎么设计？受控和非受控是什么？）]()
 
