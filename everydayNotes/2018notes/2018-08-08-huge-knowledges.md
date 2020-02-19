@@ -2,7 +2,7 @@
 
 ## js、nodejs 基础 ##
 
-        闭包
+        [闭包]: https://segmentfault.com/a/1190000006875662
         作用域
         原型链
         变量提升
