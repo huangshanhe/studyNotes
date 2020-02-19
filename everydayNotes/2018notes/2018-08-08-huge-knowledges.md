@@ -1,4 +1,4 @@
-# a lot of knowledges 总结一下 #
+# 前端基础问题总结一下(参考酷家乐fang大佬) #
 
 ## js、nodejs 基础 ##
 
@@ -166,64 +166,70 @@
 
 主要考察反应速度、逻辑思维、推理能力，达到正常以上水平即可
 
-[25 匹马]()
+[25 匹马](http://www.codeceo.com/article/it-interview-question-2017.html)
 
-[烧绳子]()
+[烧绳子](https://juejin.im/post/5c6b5ff6518825620947e86b)
 
-[推理题]()
+[推理题](。。。)
 
 ## 应用框架原理 ##
 
 考察是不是只会用，只是技术栈的罗列，而不清楚内部的原理机制，更没有借鉴落地的场景，这块也是重点考察
 
-[react、angular、vue 实现原理（三个选一个候选人最擅长的，针对某个流程详细考察，]()
+[react、angular、vue 实现原理（三个选一个候选人最擅长的，针对某个流程详细考察，](https://juejin.im/post/5b8b56e3f265da434c1f5f76)
 
-[比如 dom diff、dom patch、脏检查、双向绑定、依赖收集等）]()
+[比如 dom diff、dom patch、脏检查、双向绑定、依赖收集等）](https://juejin.im/post/5c8e5e4951882545c109ae9
 
-[setState 相关问题，dirty component 是啥]()
+[依赖收集](https://zhuanlan.zhihu.com/p/45081605)
 
-[forceUpdate() 用过吗？是什么干嘛用的？与 setState 有啥区别？]()
+[setState 相关问题，dirty component 是啥](https://juejin.im/post/5b45c57c51882519790c7441)
 
-[props 和 state]()
+[forceUpdate() 用过吗？是什么干嘛用的？与 setState 有啥区别？](https://juejin.im/post/5d254fcc6fb9a07efb69acda)
 
-[组件设计相关（怎么设计？受控和非受控是什么？）]()
+[props 和 state](https://juejin.im/post/5ad458c7f265da239c7bd37c)
 
-[children.map 是什么，和普通的 map 有什么区别？使用场景]()
+[组件设计相关（怎么设计？受控和非受控是什么？）](https://juejin.im/post/5b3507df51882574af2821ce)
 
-[cloneElement 干嘛用的，使用场景，和 createElement 区别]()
+[children.map 是什么，和普通的 map 有什么区别？使用场景](https://juejin.im/post/5d46b71a6fb9a06b0c084acd)
 
-[生命周期相关]
+[cloneElement 干嘛用的，使用场景，和 createElement 区别](https://juejin.im/post/5db957e2f265da4d1b51cc2c)
 
-[react 16 新特性，react 17 前瞻，fiber，hooks，suspense，异步渲染等]()
+[生命周期相关](https://juejin.im/post/5df648836fb9a016526eba01)
 
-[redux、mobx、vuex、dva 等状态管理框架实现原理，针对几个点详细考察]()
+[react 16 新特性，react 17 前瞻，fiber，hooks，suspense，异步渲染等](https://juejin.im/post/5c779d156fb9a049c15fe732)
 
-[redux 或 mobx 怎么处理 side effect？]()
+[redux、mobx、vuex、dva 等状态管理框架实现原理，针对几个点详细考察](https://juejin.im/post/5c18de8ef265da616413f332)
 
-[redux 中间件模型，thunk 怎么实现？saga 怎么实现的？]()
+[redux 或 mobx 怎么处理 side effect？](https://juejin.im/post/5b4ff9ece51d45190c18bb65)
 
-[koa、express 用过吗？中间件模型了解吗？有啥区别？]()
+[redux 中间件模型，thunk 怎么实现？saga 怎么实现的？](https://juejin.im/post/5aa0c928f265da239235e905)
 
-[router 用过吗？核心流程怎么实现的？]()
+[koa、express 用过吗？中间件模型了解吗？有啥区别？](https://juejin.im/post/5b9a23a45188255c9c751b07)
 
-[用过什么 xhr 封装库？（axios、fetch，各家长短？有啥坑吗？）]()
+[router 用过吗？核心流程怎么实现的？](https://juejin.im/post/5ac61da66fb9a028c71eae1b)
 
-[babel 原理（有哪些东西，分别干嘛用的，怎么实现的，runtime，polyfill，register）]()
+[用过什么 xhr 封装库？（axios、fetch，各家长短？有啥坑吗？）](https://segmentfault.com/a/1190000012836882)
 
-[webpack 核心流程原理，怎么实现模块化的，treeshaking 怎么做的？]()
+[babel 原理（有哪些东西，分别干嘛用的，怎么实现的，runtime，polyfill，register）](https://juejin.im/post/5c3beaee6fb9a04a027a9641)
+
+[webpack 核心流程原理，怎么实现模块化的？](https://juejin.im/post/5c62a137f265da2db87b87bb)
+
+[treeshaking](https://juejin.im/post/5bb8ef58f265da0a972e3434)
 
 其他
 
 随便问点一些业务上的思考，技术加分项，或技术视野、分享、选型方面的考虑
 
-[使用 typescript 吗？如何看待的，什么情况下用，类型声明文件怎么写的]()
+[使用 typescript 吗？如何看待的，什么情况下用，类型声明文件怎么写的](https://juejin.im/post/5d8efeace51d45782b0c1bd6)
 
-[单元测试（jest、mocha、ava）]()
+[单元测试（jest、mocha、ava）](https://juejin.im/post/5b2da89cf265da597f1c7cab)
 
-[如何发布一个二方或三方包，有哪些考量]()
+[如何发布一个二方或三方包，有哪些考量](https://juejin.im/post/5d09054f51882563194b302c)
 
-[技术选型的考量指标、维度]()
+[技术选型的考量指标、维度](https://mp.weixin.qq.com/s?__biz=MzIyNjU5OTg0Ng==&mid=2247484203&idx=1&sn=357605cdac00b34e6837cd881bbeff44&chksm=e86cb5e2df1b3cf41eb57ab26f186e26593cac31825bb16d20a93ea3cf9ddec5f9f983565ae6&mpshare=1&scene=1&srcid=031440hkmt6gkwwmITdOwdmm&rd2werd=1#wechat_r)
 
-[mongo、es、redis 方面相关知识]()
+[mongo、es、redis 方面相关知识](https://zhuanlan.zhihu.com/p/42272979)
 
-[工程化、ci、docker、k8s 相关知识]()
+[工程化、ci、docker相关知识](https://juejin.im/post/5d50d1d9f265da03aa25607b)
+
+[k8s](https://juejin.im/post/5c8231486fb9a049ca3825b0)
