@@ -2,8 +2,8 @@
 
 ## js、nodejs 基础 ##
 
-[闭包]: https://segmentfault.com/a/1190000006875662 "闭包"
-[作用域]: https://juejin.im/post/5afb0ae56fb9a07aa2138425 "作用域"
+[闭包]: (https://segmentfault.com/a/1190000006875662 "闭包")
+[作用域]: (https://juejin.im/post/5afb0ae56fb9a07aa2138425)
 原型链
 变量提升
 函数参数值传递
