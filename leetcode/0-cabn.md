@@ -101,15 +101,15 @@
             console.log('say')
         }
 
-        function mockNew() {
-            let Constructor = [].shift.call(arguments); // 取出构造函数
-
-            let obj = {}   // new 执行会创建一个新对象
-
-            obj.__proto__ = Constructor.prototype 
-
-            Constructor.apply(obj, arguments)
-            return obj
+        function _new(fn,...args){   // ...args为ES6展开符,也可以使用arguments
+            //先用Object创建一个空的对象,
+            const obj = Object.create(fn.prototype)  //fn.prototype代表 用当前对象的原型去创建
+            
+            //现在obj就代表Dog了,但是参数和this指向没有修改
+            const res = fn.apply(obj,args)
+            
+            //正常规定,如何fn返回的是null或undefined(也就是不返回内容),我们返回的是obj,否则返回rel
+            return res instanceof Object ? res : obj
         }
         let animal = mockNew(Animal, 'dog')
 
