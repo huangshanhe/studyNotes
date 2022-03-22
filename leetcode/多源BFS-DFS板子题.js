@@ -1,3 +1,6 @@
+# 多源BFS、DFS题
+
+```js
 /*
  * @lc app=leetcode.cn id=994 lang=javascript
  *
@@ -302,4 +305,4 @@
     return ans;
 };
 // @lc code=end
-
+```
