@@ -138,9 +138,6 @@ return arr[arr.length - k];
 ### 3、三数之和
 
 leetcode地址：[三数之和](https://leetcode.cn/problems/3sum/description/?source=vscode)
-
-*   题目描述：
-    ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/1cab3c2004b44cda8d4b7090badb1118~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5YmN56uv5omT5pu05Lq6ZXI=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDA3MjI0Njc5ODQ2MDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1725360540&x-orig-sign=dThK03Y68WRthtbTrHWffNOgT1s%3D)
 *   题解：
 
 ```js
