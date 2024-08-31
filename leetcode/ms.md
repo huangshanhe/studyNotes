@@ -188,8 +188,6 @@ var threeSum = function(nums) {
 
 leetcode地址：[无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/?source=vscode)
 
-*   题目描述：
-    ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/56670a8bd9b34970b45c3f59635e5b80~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5YmN56uv5omT5pu05Lq6ZXI=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDA3MjI0Njc5ODQ2MDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1725360540&x-orig-sign=iZ22evmBA%2BeR7yL6ZHMa1geS2aw%3D)
 *   题解：
 
 ```js
