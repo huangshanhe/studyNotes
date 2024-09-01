@@ -215,8 +215,6 @@ var lengthOfLongestSubstring = function(s) {
 
 leetcode地址：[括号生成](https://leetcode.cn/problems/generate-parentheses/?source=vscode)
 
-*   题目描述：
-    ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/e38a1e7adac345a98a519e8749a51235~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5YmN56uv5omT5pu05Lq6ZXI=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDA3MjI0Njc5ODQ2MDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1725360540&x-orig-sign=mSE4nqhgx%2Fzi8DwzDA8%2BRCOf1zE%3D)
 *   题解：
 
 ```js
