@@ -322,10 +322,6 @@ var generate = function(numRows) {
 
 leetcode地址：[165. 比较版本号](https://leetcode.cn/problems/compare-version-numbers/)
 
-*   题目描述：
-
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/cfd3e927d7ef40debe69573255b93936~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5YmN56uv5omT5pu05Lq6ZXI=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDA3MjI0Njc5ODQ2MDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1725360540&x-orig-sign=3DO48TvwdqfdXhvct4ja7%2FE%2FOGw%3D)
-
 *   题解：
 
 ```js
