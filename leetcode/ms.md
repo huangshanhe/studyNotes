@@ -464,12 +464,6 @@ var isPalindrome = function(head) {
 
 leetcode地址：[160. 相交链表](https://leetcode.cn/problems/intersection-of-two-linked-lists/)
 
-*   题目描述：
-
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/7196a38518e44c478244b1709ec2070c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5YmN56uv5omT5pu05Lq6ZXI=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDA3MjI0Njc5ODQ2MDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1725360540&x-orig-sign=ugKTjWlWg9qkDX%2BNc2DLoDMEbIc%3D)
-
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/ef16b9fd768a43138d418e6fbfc6dab6~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5YmN56uv5omT5pu05Lq6ZXI=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDA3MjI0Njc5ODQ2MDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1725360540&x-orig-sign=K6dr8VMKlyUlWgezw0%2BKrCwgFS0%3D)
-
 *   题解：
 
 ```js
