@@ -542,10 +542,6 @@ var getIntersectionNode = function (headA, headB) {
 
 leetcode地址：[146. LRU 缓存](https://leetcode.cn/problems/lru-cache/)
 
-*   题目描述：
-
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/a1be3a7d87be4b7b9cf29780ba35b758~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5YmN56uv5omT5pu05Lq6ZXI=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDA3MjI0Njc5ODQ2MDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1725360540&x-orig-sign=%2FSgq%2BnYmhwI%2FA3dCOGA596Uwryo%3D)
-
 *   题解：
 
 ```js
