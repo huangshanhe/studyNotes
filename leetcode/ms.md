@@ -595,11 +595,6 @@ LRUCache.prototype.put = function(key, value) {
 
 leetcode地址:[遍历二叉树](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
 
-*   题目描述:
-
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/8169ea79bd834c638c5130535dd8cf76~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5YmN56uv5omT5pu05Lq6ZXI=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDA3MjI0Njc5ODQ2MDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1725360540&x-orig-sign=qnqH7m7LQSe1brEn0%2FlMcZlIySQ%3D)
-顺便把前中后序遍历加非递归写法总结下
-
 *   题解
 
 ```js
