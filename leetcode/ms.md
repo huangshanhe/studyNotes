@@ -770,10 +770,6 @@ var maxDepth = function(root) {
 
 leetcode地址:[199. 二叉树的右视图](https://leetcode.cn/problems/binary-tree-right-side-view/)
 
-*   题目描述：
-
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/e9c86830bfd043ceb757ef9d6e59ff68~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5YmN56uv5omT5pu05Lq6ZXI=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDA3MjI0Njc5ODQ2MDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1725360540&x-orig-sign=SI3J6VMHSq%2BdLIlS9I%2FzvMcI4Kg%3D)
-
 *   解答：
 
 ```js
