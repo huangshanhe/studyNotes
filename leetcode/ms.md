@@ -655,8 +655,6 @@ return ans.reverse(); // 从 根 右 左  到 左右根为后序遍历
 
 leetcode地址：[对称二叉树](https://leetcode.cn/problems/symmetric-tree/description/?source=vscode)
 
-*   题目描述：
-    ![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/7472b099fd124010bce0133c2b8480d9~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5YmN56uv5omT5pu05Lq6ZXI=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDA3MjI0Njc5ODQ2MDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1725360540&x-orig-sign=N%2FrREV%2BXJItyU4V4tib4S%2BpoBbg%3D)
 *   题解：
 
 ```js
