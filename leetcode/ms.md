@@ -935,10 +935,6 @@ var lowestCommonAncestor = function(root, p, q) {
 
 leetcode地址:[300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/)
 
-*   题目描述：
-
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/2f94df7315d74f97ae582b8b1c818abc~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5YmN56uv5omT5pu05Lq6ZXI=:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiNDA3MjI0Njc5ODQ2MDQ3OCJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1725360540&x-orig-sign=ZWP01pbUVyHH%2FiPmY3BrxvHWBU0%3D)
-
 *   解答：
 
 ```js
