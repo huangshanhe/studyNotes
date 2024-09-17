@@ -3,7 +3,7 @@ highlight: an-old-hope
 theme: channing-cyan
 ---
 
-# 前端有必要刷算法吗？ 1
+# 前端有必要刷算法吗？ 
 
 ## 前言
 
