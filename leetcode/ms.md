@@ -5,7 +5,7 @@ theme: channing-cyan
 
 # 前端有必要刷算法吗？ 
 
-## 前言
+## 前言111
 
 *   先抛结论：刷了一段时间算法后，腰不酸了、腿不疼了、面试也不慌了，连看源码也更省力了，这难道就是内功提升带来的好处？（Vue3.0的diff算法优化（最长递增子序列）[源码在底部点这里](#ym)）
 
@@ -30,7 +30,7 @@ leetcode地址:[反转链表](https://leetcode-cn.com/problems/reverse-linked-li
  * @return {ListNode}
  */
 var reverseList = function (head) {
-    // 递归解法11
+    // 递归解法
     if (!head?.next) { // 终止条件
         return head;
     }
