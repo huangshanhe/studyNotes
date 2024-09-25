@@ -63,7 +63,7 @@ let hex: number = 0xf00d;
 let binary: number = 0b1010;
 let octal: number = 0o744;
 
-// 字符串类型
+// 字符串类型111
 let color: string = "blue";
 color = 'red';
 let fullName: string = `Bob Bobbington`;
