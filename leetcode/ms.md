@@ -18,7 +18,7 @@ theme: channing-cyan
 
 ## 附上20题面试高频算法题
 
-### 1、反转链表11
+### 1、反转链表
 
 leetcode地址:[反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
 
