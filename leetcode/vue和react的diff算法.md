@@ -2,7 +2,7 @@
 
 ## vue 参考[这里](https://juejin.im/post/5affd01551882542c83301da) ##
 
-- 主要是patch补丁函数
+- 主要是patch补丁函数1
 
         function patch (oldVnode, vnode) {
             // some code

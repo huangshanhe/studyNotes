@@ -53,7 +53,7 @@ var reverseList = function (head) {
 };
 ```
 
-### 2、快排、冒泡、归并
+### 2、快排、冒泡、归并11
 
 leetcode地址：[排序](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
 *   题解：
