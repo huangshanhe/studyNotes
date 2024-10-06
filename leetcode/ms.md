@@ -35,7 +35,7 @@ var reverseList = function (head) {
         return head;
     }
     const cur = reverseList(head.next); // 一直递
-    head.next.next = head; // 回指 4.nex.next = head  就是  5.next = 41
+    head.next.next = head; // 回指 4.nex.next = head  就是  5.next = 4
     head.next = null; // 断开指防止循环
     return cur; // 一直返回尾巴,是因为每一层都要返回 尾巴5,也就是翻转后的head（需要的结果）
 
