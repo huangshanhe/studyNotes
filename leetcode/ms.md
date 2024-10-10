@@ -135,7 +135,7 @@ const arr =  mergeSort(nums); // 归并排序不改变原数组，需要赋值
 return arr[arr.length - k];
 ```
 
-### 3、三数之和
+### 3、三数之和1
 
 leetcode地址：[三数之和](https://leetcode.cn/problems/3sum/description/?source=vscode)
 *   题解：
