@@ -142,8 +142,8 @@ leetcode地址：[三数之和](https://leetcode.cn/problems/3sum/description/?s
 
 ```js
 /**
- * @param {number[]} nums123
- * @return {number[][]} [1,2,3]
+ * @param {number[]} nums12
+ * @return {number[][]} [1,2]
  */
 var threeSum = function(nums) {
     nums.sort((a, b) =>  a - b);
