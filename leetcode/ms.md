@@ -30,7 +30,7 @@ leetcode地址:[反转链表](https://leetcode-cn.com/problems/reverse-linked-li
  * @return {ListNode}
  */
 var reverseList = function (head) {
-    // 递归解法111
+    // 递归解法111111
     if (!head?.next) { // 终止条件
         return head;
     }
