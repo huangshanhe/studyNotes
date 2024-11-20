@@ -24,7 +24,7 @@
         
         function sameVnode (a, b) {
           return (
-            a.key === b.key &&  // key值111
+            a.key === b.key &&  // key值1和key值2相等，且
             a.tag === b.tag &&  // 标签名
             a.isComment === b.isComment &&  // 是否为注释节点
             // 是否都定义了data，data包含一些具体信息，例如onclick , style
