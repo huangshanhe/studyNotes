@@ -142,7 +142,7 @@ leetcode地址：[三数之和](https://leetcode.cn/problems/3sum/description/?s
 
 ```js
 /**
- * @param {number[]} numsMo111222
+ * @param {number[]} numsMo111222poe2
  * @return {number[][]} [1,2,3]
  */
 var threeSum = function(nums) {
