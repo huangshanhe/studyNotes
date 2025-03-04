@@ -4,6 +4,10 @@ theme: channing-cyan
 ---
 
 # 前端有必要刷算法吗？ 
+/**
+ * @param {ListNode} headpoe2
+ * @return {ListNode}
+ */
 
 ## 前言
 
