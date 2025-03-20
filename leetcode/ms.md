@@ -5,7 +5,7 @@ theme: channing-cyan
 
 # 前端有必要刷算法吗？ 
 /**
- * @param {ListNode} headpoe23
+ * @param {ListNode} headpoe234
  * @return {ListNode}
  */
 
