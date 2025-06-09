@@ -5,7 +5,7 @@ theme: channing-cyan
 
 # 前端有必要刷算法吗？ 
 /**
- * @param {ListNode} head-poe0.2-6.5
+ * @param {ListNode} head-poe0.2-6.9
  * @return {ListNode}
  */
 
