@@ -5,7 +5,7 @@ theme: channing-cyan
 
 # 前端有必要刷算法吗？ 
 /**
- * @param {ListNode} head-△○□ 12-13 03：00:00 - poe2DM123
+ * @param {ListNode} head-△○□ 12-13 03：00:00 - poe2.0DM001
  * @return {ListNode}
  */
 
