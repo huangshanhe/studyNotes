@@ -5,7 +5,7 @@ theme: channing-cyan
 
 # 前端有必要刷算法吗？ 
 /**
- * @param {ListNode} head-△○□ 5-13 03：00:00 - QD-QR-QD-QR-QD
+ * @param {ListNode} head-△○□ 5-13 03：00:00 - QD-QR
  * @return {ListNode}
  */
 
